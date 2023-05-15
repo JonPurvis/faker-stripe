@@ -64,7 +64,7 @@ public function definition(): array
 {
     $this->faker->addProvider(new Stripe($this->faker));
     
-    $faker->stripeAccountId() // acct_xBXg7yyrSyQVbsjM
+    $this->faker->stripeAccountId() // acct_xBXg7yyrSyQVbsjM
 }
 ```
 

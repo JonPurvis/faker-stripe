@@ -58,10 +58,11 @@ public function testShowExample()
 
 ### Laravel Factories
 ```php
+use WithFaker;
+
 public function definition(): array
 {
-    $faker = Factory::create();
-    $faker->addProvider(new Stripe($faker));
+    $this->faker->addProvider(new Stripe($this->faker));
     
     $faker->stripeAccountId() // acct_xBXg7yyrSyQVbsjM
 }

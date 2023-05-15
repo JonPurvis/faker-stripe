@@ -1,0 +1,19 @@
+on: push
+name: CI
+jobs:
+  pest:
+    runs-on: ubuntu-latest
+    container:
+      image: kirschbaumdevelopment/laravel-test-runner:8.1
+
+    steps:
+      - uses: actions/checkout@v1
+        with:
+          fetch-depth: 1
+
+      - name: Install composer dependencies
+        run: |
+          composer install --no-scripts
+
+      - name: Run Testsuite
+        run: vendor/bin/pest

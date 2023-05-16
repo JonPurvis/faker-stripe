@@ -15,18 +15,66 @@ a minimum PHP Version of 8.1.
 
 ## ✨Features
 This package can currently generate fake IDs for the following Stripe resources. To avoid any confusion,
-the names of resources _should_ match what's in this package.
+the names of resources _should_ match what's in thdis package.
 
-| API Resource                                                            | Method                         | Example ID                      |
-|-------------------------------------------------------------------------|--------------------------------|---------------------------------|
-| [Account](https://stripe.com/docs/api/accounts)                         | `stripeAccountId()`            | `acct_l8cMrvSDcUT4qP2h`         |
-| [Application Fee](https://stripe.com/docs/api/application_fees)         | `stripeApplicationFeeId()`     | `fee_ITNGc4r7B4QMjtOjsLr1GA2U`  |
-| [Balance Transaction](https://stripe.com/docs/api/balance_transactions) | `stripeBalanceTransactionId()` | `txn_na40ulkbDvvegzALfY8w61udH` |
-| [Charge](https://stripe.com/docs/api/charges)                           | `stripeChargeId()`             | `ch_Dxy18EPyj6XXvqQiqApPQ8dA`   |
-| [Customer](https://stripe.com/docs/api/customers)                       | `stripeCustomerId()`           | `cus_uW8qUwsTwKKtY3`            |
-| [Invoice](https://stripe.com/docs/api/invoices)                         | `stripeInvoiceId()`            | `in_1bolRDPwaNaHUaUYySy79x9d`   |
-| [Invoice Item](https://stripe.com/docs/api/invoiceitems)                | `stripeInvoiceItemId()`        | `ii_gOWpZpoGoMOE5IYVS86mmGXS`   |
+### Core Resources
 
+| API Resource                                                            | Method                         | Example ID                           |
+|-------------------------------------------------------------------------|--------------------------------|--------------------------------------|
+| [Balance Transaction](https://stripe.com/docs/api/balance_transactions) | `stripeBalanceTransactionId()` | `txn_na40ulkbDvvegzALfY8w61udH`      |
+| [Charge](https://stripe.com/docs/api/charges)                           | `stripeChargeId()`             | `ch_Dxy18EPyj6XXvqQiqApPQ8dA`        |
+| [Customer](https://stripe.com/docs/api/customers)                       | `stripeCustomerId()`           | `cus_uW8qUwsTwKKtY3`                 |
+| [Dispute](https://stripe.com/docs/api/disputes)                         | `stripeDisputeId()`            | `dp_e3ZeEytdlpOxMtRg9M88RMcq`        |
+| [Event](https://stripe.com/docs/api/events)                             | `stripeEventId()`              | `evt_diyd59RDTVw8ZxrnkOt62mFS`       |
+| [File](https://stripe.com/docs/api/files)                               | `stripeFileId()`               | `file_qrbRTo7XbytwvE6w3SQU8QXK`      |
+| [File Link](https://stripe.com/docs/api/file_links)                     | `stripeFileLinkId()`           | `link_Z5Tesn6zQYYdov5R3bCblM8A`      | 
+| [Mandates](https://stripe.com/docs/api/mandates)                        | `stripeMandateId()`            | `mandate_S4EbkGH8MFAOWUXivQqcV7wx`   |
+| [PaymentIntent](https://stripe.com/docs/api/payment_intents)            | `stripePaymentIntentId()`      | `pi_KiAjc3WFzvswIhq8IkCLXNBW`        |
+| [SetupAttempts](https://stripe.com/docs/api/setup_attempts)             | `stripeSetupAttemptId()`       | `setatt_JBHfYghz8HiScAnOcOKin75X`    |
+| [SetupIntent](https://stripe.com/docs/api/setup_intents)                | `stripeSetupIntentId()`        | `seti_yeYZcpT970pn6sBXlAkj8AbK`      |
+| [Payout](https://stripe.com/docs/api/payouts)                           | `stripePayoutId()`             | `po_YqFWOxztWRuLCJezThbHktTP`        |
+| [Refund](https://stripe.com/docs/api/refunds)                           | `stripeRefundId()`             | `re_3BebPOs89OAgEtXAOG0c1eF4`        |
+| [Token](https://stripe.com/docs/api/tokens)                             | `stripeTokenId()`              | `tok_q1KiYddcC48Tqney3T8Vnkzu`       |
+
+### Payment Methods
+
+### Products
+
+### Checkout
+
+### Payment Links
+
+### Billing
+| API Resource                                                            | Method                         | Example ID                          |
+|-------------------------------------------------------------------------|--------------------------------|-------------------------------------|
+| [Invoice](https://stripe.com/docs/api/invoices)                         | `stripeInvoiceId()`            | `in_1bolRDPwaNaHUaUYySy79x9d`       |
+| [Invoice Item](https://stripe.com/docs/api/invoiceitems)                | `stripeInvoiceItemId()`        | `ii_gOWpZpoGoMOE5IYVS86mmGXS`       |
+
+### Connect
+| API Resource                                                            | Method                         | Example ID                          |
+|-------------------------------------------------------------------------|--------------------------------|-------------------------------------|
+| [Account](https://stripe.com/docs/api/accounts)                         | `stripeAccountId()`            | `acct_l8cMrvSDcUT4qP2h`             |
+| [Application Fee](https://stripe.com/docs/api/application_fees)         | `stripeApplicationFeeId()`     | `fee_ITNGc4r7B4QMjtOjsLr1GA2U`      |
+
+### Fraud
+
+### Issuing
+
+### Terminal
+
+### Treasury
+
+### Sigma
+
+### Reporting
+
+### Financial Connections
+
+### Tax
+
+### Identity
+
+### Webhooks
 
 ## 📚 Usage / Examples
 ### Pest

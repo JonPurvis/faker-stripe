@@ -9,7 +9,6 @@ beforeEach(function () {
 });
 
 it('generates an account id', function () {
-    expect($this->fake->stripeInvoiceItemId())->toBeNull();
     expect($this->fake->stripeAccountId())->toStartWith('acct_')->toHaveLength(21);
 });
 

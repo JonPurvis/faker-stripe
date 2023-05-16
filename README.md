@@ -13,16 +13,20 @@ This package allows FakerPHP to generate fake IDs which have the same structure 
 Stripe. The wonderful [Pest](https://pestphp.com/) is used to run tests contained within this package, which requires
 a minimum PHP Version of 8.1. 
 
-## ✨ Features
-This package can currently generate fake IDs for the following Stripe resources:
+## ✨Features
+This package can currently generate fake IDs for the following Stripe resources. To avoid any confusion,
+the names of resources _should_ match what's in this package.
 
-- Accounts `stripeAccountId()`
-- Balance Transactions `stripeBalanceTransactionId()`
-- Charges `stripeChargeId()`
-- Customers `stripeCustomerId()`
-- Fees `stripeFeeId()`
-- Invoices `stripeInvoiceId()`
-- Invoice Items `stripeInvoiceItemId()`
+| API Resource                                                            | Method                         | Example ID                      |
+|-------------------------------------------------------------------------|--------------------------------|---------------------------------|
+| [Account](https://stripe.com/docs/api/accounts)                         | `stripeAccountId()`            | `acct_l8cMrvSDcUT4qP2h`         |
+| [Application Fee](https://stripe.com/docs/api/application_fees)         | `stripeApplicationFeeId()`     | `fee_ITNGc4r7B4QMjtOjsLr1GA2U`  |
+| [Balance Transaction](https://stripe.com/docs/api/balance_transactions) | `stripeBalanceTransactionId()` | `txn_na40ulkbDvvegzALfY8w61udH` |
+| [Charge](https://stripe.com/docs/api/charges)                           | `stripeChargeId()`             | `ch_Dxy18EPyj6XXvqQiqApPQ8dA`   |
+| [Customer](https://stripe.com/docs/api/customers)                       | `stripeCustomerId()`           | `cus_uW8qUwsTwKKtY3`            |
+| [Invoice](https://stripe.com/docs/api/invoices)                         | `stripeInvoiceId()`            | `in_1bolRDPwaNaHUaUYySy79x9d`   |
+| [Invoice Item](https://stripe.com/docs/api/invoiceitems)                | `stripeInvoiceItemId()`        | `ii_gOWpZpoGoMOE5IYVS86mmGXS`   |
+
 
 ## 📚 Usage / Examples
 ### Pest

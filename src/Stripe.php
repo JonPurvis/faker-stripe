@@ -21,6 +21,11 @@ class Stripe extends Base
         return 'acct_'.$this->generateRandomString(16);
     }
 
+    public function stripeApplicationFeeId(): string
+    {
+        return 'fee_'.$this->generateRandomString();
+    }
+
     public function stripeBalanceTransactionId(): string
     {
         return 'txn_'.$this->generateRandomString(25);
@@ -34,11 +39,6 @@ class Stripe extends Base
     public function stripeCustomerId(): string
     {
         return 'cus_'.$this->generateRandomString(14);
-    }
-
-    public function stripeFeeId(): string
-    {
-        return 'fee_'.$this->generateRandomString();
     }
 
     public function stripeInvoiceId(): string

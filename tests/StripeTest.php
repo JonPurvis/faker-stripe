@@ -92,10 +92,6 @@ it('generates a payment method card id', function () {
     expect($this->fake->stripePaymentMethodCardId())->toStartWith('card_')->toHaveLength(29);
 });
 
-it('generates a payment method source id', function () {
-    expect($this->fake->stripePaymentMethodSourceId())->toStartWith('src_')->toHaveLength(28);
-});
-
 it('generates a product id', function () {
     expect($this->fake->stripeProductId())->toStartWith('prod_')->toHaveLength(19);
 });
@@ -256,8 +252,12 @@ it('generates a terminal hardware product id', function () {
     expect($this->fake->stripeTerminalHardwareProductId())->toStartWith('thpr_')->toHaveLength(19);
 });
 
-it('generates a terminal shipping id', function () {
-    expect($this->fake->stripeTerminalShippingId())->toStartWith('thsm_')->toHaveLength(19);
+it('generates a terminal hardware sku', function () {
+    expect($this->fake->stripeTerminalHardwareSkuId())->toStartWith('thsku_')->toHaveLength(20);
+});
+
+it('generates a terminal hardware shipping method id', function () {
+    expect($this->fake->stripeTerminalHardwareShippingMethodId())->toStartWith('thsm_')->toHaveLength(19);
 });
 
 it('generates a terminal configuration id', function () {

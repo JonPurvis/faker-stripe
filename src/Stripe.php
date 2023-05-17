@@ -122,11 +122,6 @@ class Stripe extends Base
         return 'card_' . $this->generateRandomString();
     }
 
-    public function stripePaymentMethodSourceId(): string
-    {
-        return 'src_' . $this->generateRandomString();
-    }
-
     public function stripeProductId(): string
     {
         return 'prod_' . $this->generateRandomString(14);
@@ -331,7 +326,7 @@ class Stripe extends Base
         return 'thsku_' . $this->generateRandomString(14);
     }
 
-    public function stripeTerminalShippingId(): string
+    public function stripeTerminalHardwareShippingMethodId(): string
     {
         return 'thsm_' . $this->generateRandomString(14);
     }

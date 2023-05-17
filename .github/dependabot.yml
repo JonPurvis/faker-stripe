@@ -10,4 +10,4 @@ updates:
     reviewers:
       - JonPurvis
     labels:
-      - dependencies
+      - dependency

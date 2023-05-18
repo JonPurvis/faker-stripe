@@ -7,6 +7,7 @@
 ![Packagist PHP Version](https://img.shields.io/packagist/dependency-v/jonpurvis/faker-stripe/php)
 ![GitHub issues](https://img.shields.io/github/issues/jonpurvis/faker-stripe)
 ![GitHub](https://img.shields.io/github/license/jonpurvis/faker-stripe)
+![Packagist Downloads](https://img.shields.io/packagist/dt/jonpurvis/faker-stripe)
 
 ## 👋 Introduction
 This package allows FakerPHP to generate fake IDs which have the same structure you can expect to be returned from 

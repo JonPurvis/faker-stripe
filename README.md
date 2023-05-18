@@ -16,7 +16,7 @@ a minimum PHP Version of 8.1.
 
 ## ✨Features
 This package can currently generate fake IDs for the following Stripe resources. To avoid any confusion,
-the names of resources _should_ match what's in thdis package.
+the names of resources _should_ match what's in this package.
 
 ### Core Resources
 

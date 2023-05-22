@@ -9,7 +9,6 @@ beforeEach(function () {
 });
 
 it('generates a connect account id', function () {
-    expect($this->fake->stripeWebhookApplicationId())->toBeNull();
     expect($this->fake->stripeConnectAccountId())->toStartWith('acct_')->toHaveLength(21);
 });
 

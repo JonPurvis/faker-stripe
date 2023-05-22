@@ -9,6 +9,7 @@ beforeEach(function () {
 });
 
 it('generates a connect account id', function () {
+    expect($this->fake->stripeWebhookApplicationId())->toBeNull();
     expect($this->fake->stripeConnectAccountId())->toStartWith('acct_')->toHaveLength(21);
 });
 
@@ -346,4 +347,16 @@ it('generates a identity verification report id', function () {
 
 it('generates a webhook endpoint id', function () {
     expect($this->fake->stripeWebhookEndpointId())->toStartWith('we_')->toHaveLength(27);
+});
+
+it('generates a financial connection transaction refresh id', function () {
+    expect($this->fake->stripeFinancialConnectionTransactionRefreshId())->toStartWith('fctxnref_')->toHaveLength(33);
+});
+
+it('generates a tax transaction line item id', function () {
+    expect($this->fake->stripeTaxTransactionLineItemId())->toStartWith('tax_li_')->toHaveLength(21);
+});
+
+it('generates a webhook application id', function () {
+    expect($this->fake->stripeWebhookApplicationId())->toStartWith('ca_')->toHaveLength(35);
 });

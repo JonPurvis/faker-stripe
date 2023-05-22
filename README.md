@@ -148,18 +148,20 @@ the names of resources _should_ match what's in this package.
 | [Report Runs](https://stripe.com/docs/api/reporting/report_type) | `stripeReportingReportRunId()` | `frr_jJ9LNixW3dEQco0XTeX2zE1R` |
 
 ### Financial Connections
-| API Resource                                                                     | Method                                           | Example ID                         |
-|----------------------------------------------------------------------------------|--------------------------------------------------|------------------------------------|
-| [Accounts](https://stripe.com/docs/api/financial_connections/accounts)           | `stripeFinancialConnectionAccountId()`           | `fca_z3JzQ1OCkYved5uWOqh3b387`     |
-| [Account Ownership](https://stripe.com/docs/api/financial_connections/ownership) | `stripeFinancialConnectionsAccountOwnershipId()` | `fcaowns_XwyWHMQFo9koh9U1TuOMW43D` |
-| [Sessions](https://stripe.com/docs/api/financial_connections/session)            | `stripeFinancialConnectionsSessionId()`          | `fcsess_ZnomHexUQ68qiad2GWqQsvsa`  |
-| [Transactions](https://stripe.com/docs/api/financial_connections/transaction)    | `stripeFinancialConnectionTransactionId()`       | `fctxn_yIcXfBzg3NSJRYHqIW5spz4v`   |
+| API Resource                                                                         | Method                                            | Example ID                          |
+|--------------------------------------------------------------------------------------|---------------------------------------------------|-------------------------------------|
+| [Accounts](https://stripe.com/docs/api/financial_connections/accounts)               | `stripeFinancialConnectionAccountId()`            | `fca_z3JzQ1OCkYved5uWOqh3b387`      |
+| [Account Ownership](https://stripe.com/docs/api/financial_connections/ownership)     | `stripeFinancialConnectionsAccountOwnershipId()`  | `fcaowns_XwyWHMQFo9koh9U1TuOMW43D`  |
+| [Sessions](https://stripe.com/docs/api/financial_connections/session)                | `stripeFinancialConnectionsSessionId()`           | `fcsess_ZnomHexUQ68qiad2GWqQsvsa`   |
+| [Transactions](https://stripe.com/docs/api/financial_connections/transaction)        | `stripeFinancialConnectionTransactionId()`        | `fctxn_yIcXfBzg3NSJRYHqIW5spz4v`    |
+| [Transaction Refresh](https://stripe.com/docs/api/financial_connections/transaction) | `stripeFinancialConnectionTransactionRefreshId()` | `fctxnref_qjmwOP8D8hJlSBgSKqHsY0Bi` |
 
 ### Tax
-| API Resource                                                 | Method                     | Example ID                         |
-|--------------------------------------------------------------|----------------------------|------------------------------------|
-| [Calculations](https://stripe.com/docs/api/tax/calculations) | `stripeTaxCalculationId()` | `taxcalc_3tXT5aZ0nMqhD0sFe8VtY8tR` |
-| [Transactions](https://stripe.com/docs/api/tax/transactions) | `stripeTaxTransactionId()` | `tax_nnTCZZscXpM9xaJyyncMJOck`     |
+| API Resource                                                                      | Method                             | Example ID                         |
+|-----------------------------------------------------------------------------------|------------------------------------|------------------------------------|
+| [Calculations](https://stripe.com/docs/api/tax/calculations)                      | `stripeTaxCalculationId()`         | `taxcalc_3tXT5aZ0nMqhD0sFe8VtY8tR` |
+| [Transactions](https://stripe.com/docs/api/tax/transactions)                      | `stripeTaxTransactionId()`         | `tax_nnTCZZscXpM9xaJyyncMJOck`     |
+| [Transaction Line Items](https://stripe.com/docs/api/tax/transactions/line_items) | `stripeTaxTransactionLineItemId()` | `tax_li_NSTCDtCYyvp5dT`            |
 
 ### Identity
 | API Resource                                                                       | Method                                  | Example ID                    |
@@ -168,9 +170,10 @@ the names of resources _should_ match what's in this package.
 | [Transactions](https://stripe.com/docs/api/identity/verification_reports)          | `stripeIdentityVerificationReportId()`  | `vr_IwuD3wV5qfD4t4fbTOzWwUm6` |
 
 ### Webhooks
-| API Resource                                                       | Method                      | Example ID                    |
-|--------------------------------------------------------------------|-----------------------------|-------------------------------|
-| [Webhook Endpoints](https://stripe.com/docs/api/webhook_endpoints) | `stripeWebhookEndpointId()` | `we_irKQp8JwXgUxXFefCM6zlx1R` |
+| API Resource                                                         | Method                         | Example ID                            |
+|----------------------------------------------------------------------|--------------------------------|---------------------------------------|
+| [Webhook Endpoints](https://stripe.com/docs/api/webhook_endpoints)   | `stripeWebhookEndpointId()`    | `we_irKQp8JwXgUxXFefCM6zlx1R`         |
+| [Webhook Application](https://stripe.com/docs/api/webhook_endpoints) | `stripeWebhookApplicationId()` | `ca_Y5nYE1wwup9JPcXxQ9JaJWBRAJiFMujp` |
 
 ## 📚 Usage / Examples
 ### Pest

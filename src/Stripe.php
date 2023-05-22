@@ -440,4 +440,20 @@ class Stripe extends Base
     {
         return 'we_' . $this->generateRandomString();
     }
+
+    public function stripeFinancialConnectionTransactionRefreshId(): string
+    {
+        return 'fctxnref_' . $this->generateRandomString();
+    }
+
+    public function stripeTaxTransactionLineItemId(): string
+    {
+        return 'tax_li_' . $this->generateRandomString(14);
+    }
+
+    public function stripeWebhookApplicationId(): string
+    {
+        return 'ca_' . $this->generateRandomString(32);
+    }
+
 }

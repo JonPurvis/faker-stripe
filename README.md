@@ -51,7 +51,7 @@ the names of resources _should_ match what's in this package.
 | [Prices](https://stripe.com/docs/api/prices)                   | `stripeProductPriceId()`         | `price_YhlhAgy0lHbLcOWwFZ596x1S` |
 | [Promotion Codes](https://stripe.com/docs/api/promotion_codes) | `stripeProductPromotionCodeId()` | `promo_7ADzsJ6WuQIsKsIj4T4MTeIX` |
 | [Discounts](https://stripe.com/docs/api/discounts)             | `stripeProductDiscountId()`      | `di_DleWj1FqYhsriqRSaQr6jCgs`    |
-| [Tax Codes](https://stripe.com/docs/api/tax_codes)             | `stripeProductTaxCodeId()`       | `txcd_zXWfi0FF`                  |
+| [Tax Codes](https://stripe.com/docs/api/tax_codes)             | `stripeProductTaxCodeId()`       | `txcd_90766505`                  |
 | [Tax Rates](https://stripe.com/docs/api/tax_rates)             | `stripeProductTaxRateId()`       | `txr_nNePe3bTkOwlrAbsAxpXzWXy`   |
 | [Shipping Rates](https://stripe.com/docs/api/shipping_rates)   | `stripeProductShippingRateId()`  | `shr_Sg2ZpoUCsfdAujoCc8U8MDba`   |
 

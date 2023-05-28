@@ -4,9 +4,14 @@ namespace Faker\Provider;
 
 class Stripe extends Base
 {
-    private function generateRandomString($length = 24): string
+    private function generateRandomString($length = 24, $numericOnly = false): string
     {
-        $characters = '0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ';
+        if ($numericOnly) {
+            $characters = '0123456789';
+        } else {
+            $characters = '0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ';
+        }
+
         $string = '';
         $max = strlen($characters) - 1;
 
@@ -144,7 +149,7 @@ class Stripe extends Base
 
     public function stripeProductTaxCodeId(): string
     {
-        return 'txcd_' . $this->generateRandomString(8);
+        return 'txcd_' . $this->generateRandomString(8, true);
     }
 
     public function stripeProductTaxRateId(): string

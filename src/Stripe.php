@@ -461,4 +461,8 @@ class Stripe extends Base
         return 'ca_' . $this->generateRandomString(32);
     }
 
+    public function stripeCryptoOnrampSessionId(): string
+    {
+        return 'cos_' . $this->generateRandomString();
+    }
 }

@@ -169,6 +169,12 @@ the names of resources _should_ match what's in this package.
 | [VerificationSessions](https://stripe.com/docs/api/identity/verification_sessions) | `stripeIdentityVerificationSessionId()` | `vs_j8AvYT7Tbmjz26tASmjdcyNt` |
 | [Transactions](https://stripe.com/docs/api/identity/verification_reports)          | `stripeIdentityVerificationReportId()`  | `vr_IwuD3wV5qfD4t4fbTOzWwUm6` |
 
+### Crypto
+| API Resource                                                          | Method                          | Example ID                     |
+|-----------------------------------------------------------------------|---------------------------------|--------------------------------|
+| [Onramp Sessions](https://stripe.com/docs/api/crypto/onramp_sessions) | `stripeCryptoOnrampSessionId()` | `cos_wlo5PYZC2j8lFHnMaxbuFBK8` |
+
+
 ### Webhooks
 | API Resource                                                         | Method                         | Example ID                            |
 |----------------------------------------------------------------------|--------------------------------|---------------------------------------|

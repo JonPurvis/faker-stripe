@@ -359,3 +359,7 @@ it('generates a tax transaction line item id', function () {
 it('generates a webhook application id', function () {
     expect($this->fake->stripeWebhookApplicationId())->toStartWith('ca_')->toHaveLength(35);
 });
+
+it('generates a crypto onramp session id', function () {
+    expect($this->fake->stripeCryptoOnrampSessionId())->toStartWith('cdos_')->toHaveLength(28);
+});

@@ -361,5 +361,5 @@ it('generates a webhook application id', function () {
 });
 
 it('generates a crypto onramp session id', function () {
-    expect($this->fake->stripeCryptoOnrampSessionId())->toStartWith('cdos_')->toHaveLength(28);
+    expect($this->fake->stripeCryptoOnrampSessionId())->toStartWith('cos_')->toHaveLength(28);
 });

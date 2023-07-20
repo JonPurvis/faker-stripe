@@ -20,32 +20,33 @@ the names of resources _should_ match what's in this package.
 
 ### Core Resources
 
-| API Resource                                                             | Method                              | Example ID                             |
-|--------------------------------------------------------------------------|-------------------------------------|----------------------------------------|
-| [Balance Transactions](https://stripe.com/docs/api/balance_transactions) | `stripeCoreBalanceTransactionId()`  | `txn_na40ulkbDvvegzALfY8w61udH`        |
-| [Charges](https://stripe.com/docs/api/charges)                           | `stripeCoreChargeId()`              | `ch_Dxy18EPyj6XXvqQiqApPQ8dA`          |
-| [Customers](https://stripe.com/docs/api/customers)                       | `stripeCoreCustomerId()`            | `cus_uW8qUwsTwKKtY3`                   |
-| [Disputes](https://stripe.com/docs/api/disputes)                         | `stripeCoreDisputeId()`             | `dp_e3ZeEytdlpOxMtRg9M88RMcq`          |
-| [Events](https://stripe.com/docs/api/events)                             | `stripeCoreEventId()`               | `evt_diyd59RDTVw8ZxrnkOt62mFS`         |
-| [Files](https://stripe.com/docs/api/files)                               | `stripeCoreFileId()`                | `file_qrbRTo7XbytwvE6w3SQU8QXK`        |
-| [File Links](https://stripe.com/docs/api/file_links)                     | `stripeCoreFileLinkId()`            | `link_Z5Tesn6zQYYdov5R3bCblM8A`        | 
-| [Mandates](https://stripe.com/docs/api/mandates)                         | `stripeCoreMandateId()`             | `mandate_S4EbkGH8MFAOWUXivQqcV7wx`     |
-| [PaymentIntents](https://stripe.com/docs/api/payment_intents)            | `stripeCorePaymentIntentId()`       | `pi_KiAjc3WFzvswIhq8IkCLXNBW`          |
-| [SetupAttempts](https://stripe.com/docs/api/setup_attempts)              | `stripeCoreSetupAttemptId()`        | `setatt_JBHfYghz8HiScAnOcOKin75X`      |
-| [SetupIntents](https://stripe.com/docs/api/setup_intents)                | `stripeCoreSetupIntentId()`         | `seti_yeYZcpT970pn6sBXlAkj8AbK`        |
-| [Payouts](https://stripe.com/docs/api/payouts)                           | `stripeCorePayoutId()`              | `po_YqFWOxztWRuLCJezThbHktTP`          |
-| [Refunds](https://stripe.com/docs/api/refunds)                           | `stripeCoreRefundId()`              | `re_3BebPOs89OAgEtXAOG0c1eF4`          |
-| [Tokens](https://stripe.com/docs/api/tokens)                             | `stripeCoreTokenId()`               | `tok_q1KiYddcC48Tqney3T8Vnkzu`         |
+| API Resource                                                             | Method                                  | Example                                                        |
+|--------------------------------------------------------------------------|-----------------------------------------|----------------------------------------------------------------|
+| [Balance Transactions](https://stripe.com/docs/api/balance_transactions) | `stripeCoreBalanceTransactionId()`      | `txn_na40ulkbDvvegzALfY8w61udH`                                |
+| [Charges](https://stripe.com/docs/api/charges)                           | `stripeCoreChargeId()`                  | `ch_Dxy18EPyj6XXvqQiqApPQ8dA`                                  |
+| [Customers](https://stripe.com/docs/api/customers)                       | `stripeCoreCustomerId()`                | `cus_uW8qUwsTwKKtY3`                                           |
+| [Disputes](https://stripe.com/docs/api/disputes)                         | `stripeCoreDisputeId()`                 | `dp_e3ZeEytdlpOxMtRg9M88RMcq`                                  |
+| [Events](https://stripe.com/docs/api/events)                             | `stripeCoreEventId()`                   | `evt_diyd59RDTVw8ZxrnkOt62mFS`                                 |
+| [Files](https://stripe.com/docs/api/files)                               | `stripeCoreFileId()`                    | `file_qrbRTo7XbytwvE6w3SQU8QXK`                                |
+| [File Links](https://stripe.com/docs/api/file_links)                     | `stripeCoreFileLinkId()`                | `link_Z5Tesn6zQYYdov5R3bCblM8A`                                | 
+| [Mandates](https://stripe.com/docs/api/mandates)                         | `stripeCoreMandateId()`                 | `mandate_S4EbkGH8MFAOWUXivQqcV7wx`                             |
+| [PaymentIntents](https://stripe.com/docs/api/payment_intents)            | `stripeCorePaymentIntentId()`           | `pi_KiAjc3WFzvswIhq8IkCLXNBW`                                  |
+| [PaymentIntents](https://stripe.com/docs/api/payment_intents)            | `stripeCorePaymentIntentClientSecret()` | `pi_rZh1PKbBkmMFkHve9GKRKyg4_secret_dr3lRVfoKD8ew3BUmYZYuVONV` |
+| [SetupAttempts](https://stripe.com/docs/api/setup_attempts)              | `stripeCoreSetupAttemptId()`            | `setatt_JBHfYghz8HiScAnOcOKin75X`                              |
+| [SetupIntents](https://stripe.com/docs/api/setup_intents)                | `stripeCoreSetupIntentId()`             | `seti_yeYZcpT970pn6sBXlAkj8AbK`                                |
+| [Payouts](https://stripe.com/docs/api/payouts)                           | `stripeCorePayoutId()`                  | `po_YqFWOxztWRuLCJezThbHktTP`                                  |
+| [Refunds](https://stripe.com/docs/api/refunds)                           | `stripeCoreRefundId()`                  | `re_3BebPOs89OAgEtXAOG0c1eF4`                                  |
+| [Tokens](https://stripe.com/docs/api/tokens)                             | `stripeCoreTokenId()`                   | `tok_q1KiYddcC48Tqney3T8Vnkzu`                                 |
 
 ### Payment Methods
-| API Resource                                                        | Method                               | Example ID                      |
+| API Resource                                                        | Method                               | Example                         |
 |---------------------------------------------------------------------|--------------------------------------|---------------------------------|
 | [Payment Methods](https://stripe.com/docs/api/payment_methods)      | `stripePaymentMethodId()`            | `pm_jkztRiUi5yqTNqHJTzTAVolI`   |
 | [Bank Accounts](https://stripe.com/docs/api/customer_bank_accounts) | `stripePaymentMethodBankAccountId()` | `ba_gkcmh6gu31nALx6PJDJckqPn`   |
 | [Cards](https://stripe.com/docs/api/cards)                          | `stripePaymentMethodCardId()`        | `card_A56nkfbrHtdQ7bv8I9eeQOtW` |
 
 ### Products
-| API Resource                                                   | Method                           | Example ID                       |
+| API Resource                                                   | Method                           | Example                          |
 |----------------------------------------------------------------|----------------------------------|----------------------------------|
 | [Products](https://stripe.com/docs/api/products)               | `stripePaymentMethodId()`        | `pm_3ffsQykg0u0OlEEkHph2Uhvl`    |
 | [Prices](https://stripe.com/docs/api/prices)                   | `stripeProductPriceId()`         | `price_YhlhAgy0lHbLcOWwFZ596x1S` |
@@ -56,17 +57,17 @@ the names of resources _should_ match what's in this package.
 | [Shipping Rates](https://stripe.com/docs/api/shipping_rates)   | `stripeProductShippingRateId()`  | `shr_Sg2ZpoUCsfdAujoCc8U8MDba`   |
 
 ### Checkout
-| API Resource                                                       | Method                      | Example ID                                                      |
+| API Resource                                                       | Method                      | Example                                                         |
 |--------------------------------------------------------------------|-----------------------------|-----------------------------------------------------------------|
 | [Checkout Sessions](https://stripe.com/docs/api/checkout/sessions) | `stripeCheckoutSessionId()` | `cs_A1caKuWyEPOrovEkpYJLfId5uOpWzynW8ZunRYnA0J9RsPzdM6YeBfDG03` |
 
 ### Payment Links
-| API Resource                                                             | Method                  | Example ID                       |
+| API Resource                                                             | Method                  | Example                          |
 |--------------------------------------------------------------------------|-------------------------|----------------------------------|
 | [Payment Links](https://stripe.com/docs/api/payment_links/payment_links) | `stripePaymentLinkId()` | `plink_L85n1vZMv4QS0aYwj11TKjTy` |
 
 ### Billing
-| API Resource                                                                               | Method                                        | Example ID                           |
+| API Resource                                                                               | Method                                        | Example                              |
 |--------------------------------------------------------------------------------------------|-----------------------------------------------|--------------------------------------|
 | [Credit Notes](https://stripe.com/docs/api/credit_notes)                                   | `stripeBillingCreditNoteId()`                 | `cn_37b9KW8lODWCDSilck1hs0on`        |
 | [Customer Balance Transactions](https://stripe.com/docs/api/customer_balance_transactions) | `stripeBillingCustomerBalanceTransactionId()` | `cbtxn_SboO9vmMCUoTg6iGGdsOQ18R`     |
@@ -83,7 +84,7 @@ the names of resources _should_ match what's in this package.
 | [Usage Records](https://stripe.com/docs/api/usage_records)                                 | `stripeBillingUsageRecordId()`                | `mbur_ppVgDLt5HcG8zP48Grk7NZfP`      |
 
 ### Connect
-| API Resource                                                         | Method                                  | Example ID                           |
+| API Resource                                                         | Method                                  | Example                              |
 |----------------------------------------------------------------------|-----------------------------------------|--------------------------------------|
 | [Accounts](https://stripe.com/docs/api/accounts)                     | `stripeConnectAccountId()`              | `acct_l8cMrvSDcUT4qP2h`              |
 | [Application Fees](https://stripe.com/docs/api/application_fees)     | `stripeConnectApplicationFeeId()`       | `fee_ITNGc4r7B4QMjtOjsLr1GA2U`       |
@@ -96,7 +97,7 @@ the names of resources _should_ match what's in this package.
 | [Secret Management](https://stripe.com/docs/api/secret_management)   | `stripeConnectSecretManagementId()`     | `appsecret_QjQnyoan5rtIYdHSokfut7VD` |
 
 ### Fraud
-| API Resource                                                                  | Method                             | Example ID                       |
+| API Resource                                                                  | Method                             | Example                          |
 |-------------------------------------------------------------------------------|------------------------------------|----------------------------------|
 | [Early Fraud Warning](https://stripe.com/docs/api/radar/early_fraud_warnings) | `stripeFraudEarlyFraudWarningId()` | `issfr_NDwczkwka50cAHRFVfnbQP30` |
 | [Reviews](https://stripe.com/docs/api/radar/reviews)                          | `stripeFraudReviewId()`            | `prv_Zlx9K6ixTcigHUnOdpxqCjOO`   |
@@ -104,7 +105,7 @@ the names of resources _should_ match what's in this package.
 | [Value List Items](https://stripe.com/docs/api/radar/value_list_items)        | `stripeFraudValueListItemId()`     | `rsli_QQdPv6uWYm7nZUlX3g65TfGV`  |
 
 ### Issuing
-| API Resource                                                         | Method                           | Example ID                       |
+| API Resource                                                         | Method                           | Example                          |
 |----------------------------------------------------------------------|----------------------------------|----------------------------------|
 | [Authorizations](https://stripe.com/docs/api/issuing/authorizations) | `stripeIssuingAuthorizationId()` | `iauth_GyuotdxkKEHCNNYHohzBBuBh` |
 | [Cardholders](https://stripe.com/docs/api/issuing/cardholders)       | `stripeIssuingCardholderId()`    | `ich_EyqQ6EcYkhzgyrGEQSCY68EB`   |
@@ -113,7 +114,7 @@ the names of resources _should_ match what's in this package.
 | [Transactions](https://stripe.com/docs/api/issuing/transactions)     | `stripeIssuingTransactionId()`   | `ipi_FqGAHy3JUvUsjWdqyaViRFm2`   |
 
 ### Terminal
-| API Resource                                                                                | Method                                     | Example ID                      |
+| API Resource                                                                                | Method                                     | Example                         |
 |---------------------------------------------------------------------------------------------|--------------------------------------------|---------------------------------|
 | [Locations](https://stripe.com/docs/api/terminal/locations)                                 | `stripeTerminalLocationId()`               | `tml_UntmyAU2XPdrxOznzLeRFOue`  |
 | [Readers](https://stripe.com/docs/api/terminal/readers)                                     | `stripeTerminalReaderId()`                 | `tmr_2j8WBisfMEwMBNtLJEJ7uLOe`  |
@@ -124,7 +125,7 @@ the names of resources _should_ match what's in this package.
 | [Configurations](https://stripe.com/docs/api/terminal/configuration)                        | `stripeTerminalConfigurationId()`          | `tmc_L7yWqYiNsihDrn`            |
 
 ### Treasury
-| API Resource                                                                   | Method                               | Example ID                         |
+| API Resource                                                                   | Method                               | Example                            |
 |--------------------------------------------------------------------------------|--------------------------------------|------------------------------------|
 | [FinancialAccounts](https://stripe.com/docs/api/treasury/financial_accounts)   | `stripeTreasuryFinancialAccountId()` | `fa_SHiUjM3c13bPdvV81YlFYwQu`      |
 | [Transactions](https://stripe.com/docs/api/treasury/transactions)              | `stripeTreasuryTransactionId()`      | `trxn_VCKBAZWMzRUul2KHkWZjHGRt`    |
@@ -138,17 +139,17 @@ the names of resources _should_ match what's in this package.
 | [DebitReversals](https://stripe.com/docs/api/treasury/debit_reversals)         | `stripeTreasuryDebitReversalId()`    | `debrev_ykpt4Mi6yZAPrm8upq3yKI5r`  |
 
 ### Sigma
-| API Resource                                                             | Method                             | Example ID                     |
+| API Resource                                                             | Method                             | Example                        |
 |--------------------------------------------------------------------------|------------------------------------|--------------------------------|
 | [Scheduled Queries](https://stripe.com/docs/api/sigma/scheduled_queries) | `stripeSigmaScheduledQueryRunId()` | `sqr_89Lp2zqyTtqJXSFuPn9zHIcZ` |
 
 ### Reporting
-| API Resource                                                     | Method                         | Example ID                     |
+| API Resource                                                     | Method                         | Example                        |
 |------------------------------------------------------------------|--------------------------------|--------------------------------|
 | [Report Runs](https://stripe.com/docs/api/reporting/report_type) | `stripeReportingReportRunId()` | `frr_jJ9LNixW3dEQco0XTeX2zE1R` |
 
 ### Financial Connections
-| API Resource                                                                         | Method                                            | Example ID                          |
+| API Resource                                                                         | Method                                            | Example                             |
 |--------------------------------------------------------------------------------------|---------------------------------------------------|-------------------------------------|
 | [Accounts](https://stripe.com/docs/api/financial_connections/accounts)               | `stripeFinancialConnectionAccountId()`            | `fca_z3JzQ1OCkYved5uWOqh3b387`      |
 | [Account Ownership](https://stripe.com/docs/api/financial_connections/ownership)     | `stripeFinancialConnectionsAccountOwnershipId()`  | `fcaowns_XwyWHMQFo9koh9U1TuOMW43D`  |
@@ -157,26 +158,27 @@ the names of resources _should_ match what's in this package.
 | [Transaction Refresh](https://stripe.com/docs/api/financial_connections/transaction) | `stripeFinancialConnectionTransactionRefreshId()` | `fctxnref_qjmwOP8D8hJlSBgSKqHsY0Bi` |
 
 ### Tax
-| API Resource                                                                      | Method                             | Example ID                         |
+| API Resource                                                                      | Method                             | Example                            |
 |-----------------------------------------------------------------------------------|------------------------------------|------------------------------------|
 | [Calculations](https://stripe.com/docs/api/tax/calculations)                      | `stripeTaxCalculationId()`         | `taxcalc_3tXT5aZ0nMqhD0sFe8VtY8tR` |
 | [Transactions](https://stripe.com/docs/api/tax/transactions)                      | `stripeTaxTransactionId()`         | `tax_nnTCZZscXpM9xaJyyncMJOck`     |
 | [Transaction Line Items](https://stripe.com/docs/api/tax/transactions/line_items) | `stripeTaxTransactionLineItemId()` | `tax_li_NSTCDtCYyvp5dT`            |
 
 ### Identity
-| API Resource                                                                       | Method                                  | Example ID                    |
+| API Resource                                                                       | Method                                  | Example                       |
 |------------------------------------------------------------------------------------|-----------------------------------------|-------------------------------|
 | [VerificationSessions](https://stripe.com/docs/api/identity/verification_sessions) | `stripeIdentityVerificationSessionId()` | `vs_j8AvYT7Tbmjz26tASmjdcyNt` |
 | [Transactions](https://stripe.com/docs/api/identity/verification_reports)          | `stripeIdentityVerificationReportId()`  | `vr_IwuD3wV5qfD4t4fbTOzWwUm6` |
 
 ### Crypto
-| API Resource                                                          | Method                          | Example ID                     |
-|-----------------------------------------------------------------------|---------------------------------|--------------------------------|
-| [Onramp Sessions](https://stripe.com/docs/api/crypto/onramp_sessions) | `stripeCryptoOnrampSessionId()` | `cos_wlo5PYZC2j8lFHnMaxbuFBK8` |
+| API Resource                                                          | Method                                    | Example                                                                   |
+|-----------------------------------------------------------------------|-------------------------------------------|---------------------------------------------------------------------------|
+| [Onramp Sessions](https://stripe.com/docs/api/crypto/onramp_sessions) | `stripeCryptoOnrampSessionId()`           | `cos_wlo5PYZC2j8lFHnMaxbuFBK8`                                            |
+| [Onramp Sessions](https://stripe.com/docs/api/crypto/onramp_sessions) | `stripeCryptoOnrampSessionClientSecret()` | `cos_Wjo3OVUVusWY54RHF6oCM0Jm_secret_Bm9iRlLbb82K19mwOxQE9jVdA0U8rMEmKO6` |
 
 
 ### Webhooks
-| API Resource                                                         | Method                         | Example ID                            |
+| API Resource                                                         | Method                         | Example                               |
 |----------------------------------------------------------------------|--------------------------------|---------------------------------------|
 | [Webhook Endpoints](https://stripe.com/docs/api/webhook_endpoints)   | `stripeWebhookEndpointId()`    | `we_irKQp8JwXgUxXFefCM6zlx1R`         |
 | [Webhook Application](https://stripe.com/docs/api/webhook_endpoints) | `stripeWebhookApplicationId()` | `ca_Y5nYE1wwup9JPcXxQ9JaJWBRAJiFMujp` |
@@ -224,8 +226,3 @@ public function definition(): array
     $this->faker->stripeConnectAccountId() // acct_xBXg7yyrSyQVbsjM
 }
 ```
-
-## 🧩 Contributing
-
-I originally built the package to suit the needs I had at the time, but the Stripe API is pretty big and has a lot of resources. If you need a resource adding, feel free to [Raise an Issue](https://github.com/JonPurvis/faker-stripe/issues) or Submit a PR! If you're doing the latter, only PR's with passing tests will be merged.
-

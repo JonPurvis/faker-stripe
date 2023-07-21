@@ -363,3 +363,11 @@ it('generates a webhook application id', function () {
 it('generates a crypto onramp session id', function () {
     expect($this->fake->stripeCryptoOnrampSessionId())->toStartWith('cos_')->toHaveLength(28);
 });
+
+it('generates a payment intent client secret', function () {
+    expect($this->fake->stripeCorePaymentIntentClientSecret())->toStartWith('pi_')->toContain('_secret_')->toHaveLength(60);
+});
+
+it('generates a crypto onramp session client secret', function () {
+    expect($this->fake->stripeCryptoOnrampSessionClientSecret())->toStartWith('cos_')->toContain('_secret_')->toHaveLength(71);
+});

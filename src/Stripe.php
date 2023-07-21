@@ -465,4 +465,14 @@ class Stripe extends Base
     {
         return 'cos_' . $this->generateRandomString();
     }
+
+    public function stripeCorePaymentIntentClientSecret(): string
+    {
+        return 'pi_' . $this->generateRandomString() . '_secret_' .  $this->generateRandomString(25);
+    }
+
+    public function stripeCryptoOnrampSessionClientSecret(): string
+    {
+        return 'cos_' . $this->generateRandomString() . '_secret_' .  $this->generateRandomString(35);
+    }
 }

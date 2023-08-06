@@ -371,3 +371,7 @@ it('generates a payment intent client secret', function () {
 it('generates a crypto onramp session client secret', function () {
     expect($this->fake->stripeCryptoOnrampSessionClientSecret())->toStartWith('cos_')->toContain('_secret_')->toHaveLength(71)->toBeString();
 })->repeat(2);
+
+it('generates a connect capability id', function () {
+    expect($this->fake->stripeConnectCapabilityId())->toStartWith('acap_')->toHaveLength(29)->toBeString();
+})->repeat(2);

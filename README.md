@@ -89,6 +89,7 @@ the names of resources _should_ match what's in this package.
 | [Accounts](https://stripe.com/docs/api/accounts)                     | `stripeConnectAccountId()`              | `acct_l8cMrvSDcUT4qP2h`              |
 | [Application Fees](https://stripe.com/docs/api/application_fees)     | `stripeConnectApplicationFeeId()`       | `fee_ITNGc4r7B4QMjtOjsLr1GA2U`       |
 | [Application Fee Refunds](https://stripe.com/docs/api/fee_refunds)   | `stripeConnectApplicationFeeRefundId()` | `fr_XxY71TOJinzdNkmEQUVtlUGk`        |
+| [Capabilities](https://stripe.com/docs/api/capabilities)             | `stripeConnectCapabilityId()`           | `acap_gettfmKTrHMdUQgppBj8BJ6F`      |
 | [External Accounts](https://stripe.com/docs/api/external_accounts)   | `stripeConnectExternalAccountId()`      | `ba_j8048CaKvbk1ie7lfxyzXF19`        |
 | [Persons](https://stripe.com/docs/api/persons)                       | `stripeConnectPersonId()`               | `person_cNquFb7JU2nVsfIlprJHqIc1`    |
 | [Top-ups](https://stripe.com/docs/api/topups)                        | `stripeConnectTopUpId()`                | `tu_kdxjWmOqbz9J5rMdnibcnr37`        |

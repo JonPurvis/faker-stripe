@@ -475,4 +475,9 @@ class Stripe extends Base
     {
         return 'cos_' . $this->generateRandomString() . '_secret_' .  $this->generateRandomString(35);
     }
+
+    public function stripeConnectCapabilityId(): string
+    {
+        return 'acap_' . $this->generateRandomString();
+    }
 }

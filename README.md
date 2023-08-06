@@ -191,27 +191,19 @@ beforeEach(function () {
     $this->fake->addProvider(new Stripe($this->fake));
 });
 
-it('shows an example', function () {
-    $this->fake->stripeConnectAccountId() // acct_xBXg7yyrSyQVbsjM
+it('generates a well structured stripe account id', function () {
+   expect($this->fake->stripeConnectAccountId())->toStartWith('acct_')->toHaveLength(21)->toBeString();
 });
 ```
 
 ### PHPUnit
 ```php
-
-private Generator $faker;
-
-protected function setUp(): void
+public function testGeneratesWellStructuredStripeAccountId()
 {
     $faker = Factory::create();
     $faker->addProvider(new Stripe($faker));
 
-    $this->faker = $faker;
-}
-
-public function testShowExample()
-{
-    $this->faker->stripeConnectAccountId() // acct_xBXg7yyrSyQVbsjM
+    $this->assertStringStartsWith('acct_', $faker->stripeConnectAccountId());
 }
 ```
 
@@ -223,6 +215,10 @@ public function definition(): array
 {
     $this->faker->addProvider(new Stripe($this->faker));
     
-    $this->faker->stripeConnectAccountId() // acct_xBXg7yyrSyQVbsjM
+    return [
+        'id' => $this->faker->stripeConnectAccountId(),
+        'name' => 'John Doe',
+        'email' => 'john.doe@testing.co.uk'
+    ];   
 }
 ```

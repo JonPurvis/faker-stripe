@@ -13,10 +13,10 @@
     ],
     "require": {
         "php": "^8.1",
-        "fakerphp/faker": "^1.10"
+        "fakerphp/faker": "^1.23"
     },
     "require-dev": {
-        "pestphp/pest": "^2.6",
+        "pestphp/pest": "^2.12",
         "pestphp/pest-plugin-faker": "^2.0"
     },
     "autoload": {

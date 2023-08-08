@@ -480,4 +480,9 @@ class Stripe extends Base
     {
         return 'acap_' . $this->generateRandomString();
     }
+
+    public function stripeCashBalanceTransactionId(): string
+    {
+        return 'ccsbtxn_' . $this->generateRandomString();
+    }
 }

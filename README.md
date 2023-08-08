@@ -39,11 +39,12 @@ the names of resources _should_ match what's in this package.
 | [Tokens](https://stripe.com/docs/api/tokens)                             | `stripeCoreTokenId()`                   | `tok_q1KiYddcC48Tqney3T8Vnkzu`                                 |
 
 ### Payment Methods
-| API Resource                                                        | Method                               | Example                         |
-|---------------------------------------------------------------------|--------------------------------------|---------------------------------|
-| [Payment Methods](https://stripe.com/docs/api/payment_methods)      | `stripePaymentMethodId()`            | `pm_jkztRiUi5yqTNqHJTzTAVolI`   |
-| [Bank Accounts](https://stripe.com/docs/api/customer_bank_accounts) | `stripePaymentMethodBankAccountId()` | `ba_gkcmh6gu31nALx6PJDJckqPn`   |
-| [Cards](https://stripe.com/docs/api/cards)                          | `stripePaymentMethodCardId()`        | `card_A56nkfbrHtdQ7bv8I9eeQOtW` |
+| API Resource                                                        | Method                               | Example                            |
+|---------------------------------------------------------------------|--------------------------------------|------------------------------------|
+| [Payment Methods](https://stripe.com/docs/api/payment_methods)      | `stripePaymentMethodId()`            | `pm_jkztRiUi5yqTNqHJTzTAVolI`      |
+| [Bank Accounts](https://stripe.com/docs/api/customer_bank_accounts) | `stripePaymentMethodBankAccountId()` | `ba_gkcmh6gu31nALx6PJDJckqPn`      |
+| [Cash Balance](https://stripe.com/docs/api/cash_balance)            | `stripeCashBalanceTransactionId()`   | `ccsbtxn_6sKoup9yicpuPC7MykObBsjq` |
+| [Cards](https://stripe.com/docs/api/cards)                          | `stripePaymentMethodCardId()`        | `card_A56nkfbrHtdQ7bv8I9eeQOtW`    |
 
 ### Products
 | API Resource                                                   | Method                           | Example                          |

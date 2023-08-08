@@ -71,8 +71,8 @@ the names of resources _should_ match what's in this package.
 |--------------------------------------------------------------------------------------------|-----------------------------------------------|--------------------------------------|
 | [Credit Notes](https://stripe.com/docs/api/credit_notes)                                   | `stripeBillingCreditNoteId()`                 | `cn_37b9KW8lODWCDSilck1hs0on`        |
 | [Customer Balance Transactions](https://stripe.com/docs/api/customer_balance_transactions) | `stripeBillingCustomerBalanceTransactionId()` | `cbtxn_SboO9vmMCUoTg6iGGdsOQ18R`     |
-| [Credit Notes](https://stripe.com/docs/api/customer_portal)                                | `stripeBillingCustomerPortalId()`             | `bps_HFXl8fnSxXjVUvepP0g7cfEH`       |
-| [Credit Notes](https://stripe.com/docs/api/customer_tax_ids)                               | `stripeBillingCustomerTaxIdId()`              | `txi_Vs7BSOcldH5QIN35U8lSlJuc`       |
+| [Customer Portal](https://stripe.com/docs/api/customer_portal)                             | `stripeBillingCustomerPortalId()`             | `bps_HFXl8fnSxXjVUvepP0g7cfEH`       |
+| [Customer Tax IDs](https://stripe.com/docs/api/customer_tax_ids)                           | `stripeBillingCustomerTaxIdId()`              | `txi_Vs7BSOcldH5QIN35U8lSlJuc`       |
 | [Invoices](https://stripe.com/docs/api/invoices)                                           | `stripeBillingInvoiceId()`                    | `in_pBNUeaVUmJ8I44Fx1OajNLQn`        |
 | [Invoice Items](https://stripe.com/docs/api/invoiceitems)                                  | `stripeBillingInvoiceItemId()`                | `ii_gOWpZpoGoMOE5IYVS86mmGXS`        |
 | [Plans](https://stripe.com/docs/api/plans)                                                 | `stripeBillingPlanId()`                       | `price_9wWZ7dtmQSWvQDhFBJB49sv8`     |

@@ -375,3 +375,7 @@ it('generates a crypto onramp session client secret', function () {
 it('generates a connect capability id', function () {
     expect($this->fake->stripeConnectCapabilityId())->toStartWith('acap_')->toHaveLength(29)->toBeString();
 })->repeat(2);
+
+it('generates a cash balance transaction id', function () {
+    expect($this->fake->stripeCashBalanceTransactionId())->toStartWith('ccsbtxn_')->toHaveLength(32)->toBeString();
+})->repeat(2);

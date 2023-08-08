@@ -316,12 +316,12 @@ it('generates a financial connection account id', function () {
     expect($this->fake->stripeFinancialConnectionAccountId())->toStartWith('fca_')->toHaveLength(28)->toBeString();
 })->repeat(2);
 
-it('generates a financial connections account ownership id', function () {
-    expect($this->fake->stripeFinancialConnectionsAccountOwnershipId())->toStartWith('fcaowns_')->toHaveLength(32)->toBeString();
+it('generates a financial connection account ownership id', function () {
+    expect($this->fake->stripeFinancialConnectionAccountOwnershipId())->toStartWith('fcaowns_')->toHaveLength(32)->toBeString();
 })->repeat(2);
 
-it('generates a financial connections session id', function () {
-    expect($this->fake->stripeFinancialConnectionsSessionId())->toStartWith('fcsess_')->toHaveLength(31)->toBeString();
+it('generates a financial connection session id', function () {
+    expect($this->fake->stripeFinancialConnectionSessionId())->toStartWith('fcsess_')->toHaveLength(31)->toBeString();
 })->repeat(2);
 
 it('generates a financial connection transaction id', function () {
@@ -378,4 +378,8 @@ it('generates a connect capability id', function () {
 
 it('generates a cash balance transaction id', function () {
     expect($this->fake->stripeCashBalanceTransactionId())->toStartWith('ccsbtxn_')->toHaveLength(32)->toBeString();
+})->repeat(2);
+
+it('generates a financial connection account inferred balance id', function () {
+    expect($this->fake->stripeFinancialConnectionAccountInferredBalanceId())->toStartWith('fcinba_d')->toHaveLength(31)->toBeString();
 })->repeat(2);

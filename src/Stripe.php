@@ -406,12 +406,12 @@ class Stripe extends Base
         return 'fca_' . $this->generateRandomString();
     }
 
-    public function stripeFinancialConnectionsAccountOwnershipId(): string
+    public function stripeFinancialConnectionAccountOwnershipId(): string
     {
         return 'fcaowns_' . $this->generateRandomString();
     }
 
-    public function stripeFinancialConnectionsSessionId(): string
+    public function stripeFinancialConnectionSessionId(): string
     {
         return 'fcsess_' . $this->generateRandomString();
     }
@@ -484,5 +484,10 @@ class Stripe extends Base
     public function stripeCashBalanceTransactionId(): string
     {
         return 'ccsbtxn_' . $this->generateRandomString();
+    }
+
+    public function stripeFinancialConnectionAccountInferredBalanceId(): string
+    {
+        return 'fcinba_' . $this->generateRandomString();
     }
 }

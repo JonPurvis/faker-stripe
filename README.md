@@ -151,13 +151,14 @@ the names of resources _should_ match what's in this package.
 | [Report Runs](https://stripe.com/docs/api/reporting/report_type) | `stripeReportingReportRunId()` | `frr_jJ9LNixW3dEQco0XTeX2zE1R` |
 
 ### Financial Connections
-| API Resource                                                                         | Method                                            | Example                             |
-|--------------------------------------------------------------------------------------|---------------------------------------------------|-------------------------------------|
-| [Accounts](https://stripe.com/docs/api/financial_connections/accounts)               | `stripeFinancialConnectionAccountId()`            | `fca_z3JzQ1OCkYved5uWOqh3b387`      |
-| [Account Ownership](https://stripe.com/docs/api/financial_connections/ownership)     | `stripeFinancialConnectionsAccountOwnershipId()`  | `fcaowns_XwyWHMQFo9koh9U1TuOMW43D`  |
-| [Sessions](https://stripe.com/docs/api/financial_connections/session)                | `stripeFinancialConnectionsSessionId()`           | `fcsess_ZnomHexUQ68qiad2GWqQsvsa`   |
-| [Transactions](https://stripe.com/docs/api/financial_connections/transaction)        | `stripeFinancialConnectionTransactionId()`        | `fctxn_yIcXfBzg3NSJRYHqIW5spz4v`    |
-| [Transaction Refresh](https://stripe.com/docs/api/financial_connections/transaction) | `stripeFinancialConnectionTransactionRefreshId()` | `fctxnref_qjmwOP8D8hJlSBgSKqHsY0Bi` |
+| API Resource                                                                                      | Method                                                | Example                             |
+|---------------------------------------------------------------------------------------------------|-------------------------------------------------------|-------------------------------------|
+| [Accounts](https://stripe.com/docs/api/financial_connections/accounts)                            | `stripeFinancialConnectionAccountId()`                | `fca_z3JzQ1OCkYved5uWOqh3b387`      |
+| [Accounts Inferred Balances](https://stripe.com/docs/api/financial_connections/inferred_balances) | `stripeFinancialConnectionAccountInferredBalanceId()` | `fcinba_egyG5XMYYLLXkadyiM7FEVRW`   |
+| [Account Ownership](https://stripe.com/docs/api/financial_connections/ownership)                  | `stripeFinancialConnectionAccountOwnershipId()`       | `fcaowns_XwyWHMQFo9koh9U1TuOMW43D`  |
+| [Sessions](https://stripe.com/docs/api/financial_connections/session)                             | `stripeFinancialConnectionSessionId()`                | `fcsess_ZnomHexUQ68qiad2GWqQsvsa`   |
+| [Transactions](https://stripe.com/docs/api/financial_connections/transaction)                     | `stripeFinancialConnectionTransactionId()`            | `fctxn_yIcXfBzg3NSJRYHqIW5spz4v`    |
+| [Transaction Refresh](https://stripe.com/docs/api/financial_connections/transaction)              | `stripeFinancialConnectionTransactionRefreshId()`     | `fctxnref_qjmwOP8D8hJlSBgSKqHsY0Bi` |
 
 ### Tax
 | API Resource                                                                      | Method                             | Example                            |

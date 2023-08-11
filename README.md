@@ -189,13 +189,10 @@ the names of resources _should_ match what's in this package.
 ## 📚 Usage / Examples
 ### Pest
 ```php
-beforeEach(function () {
-    $this->fake = fake();
-    $this->fake->addProvider(new Stripe($this->fake));
-});
-
 it('generates a well structured stripe account id', function () {
-   expect($this->fake->stripeConnectAccountId())->toStartWith('acct_')->toHaveLength(21)->toBeString();
+   fake()->addProvider(new Stripe(fake()));
+   
+   expect(fake()->stripeConnectAccountId())->toStartWith('acct_')->toHaveLength(21)->toBeString();
 });
 ```
 

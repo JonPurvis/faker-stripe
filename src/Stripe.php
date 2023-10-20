@@ -490,4 +490,9 @@ class Stripe extends Base
     {
         return 'fcinba_' . $this->generateRandomString();
     }
+
+    public function stripeIssuingTokenId(): string
+    {
+        return 'intok_' . $this->generateRandomString();
+    }
 }

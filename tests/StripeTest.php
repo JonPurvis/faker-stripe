@@ -383,3 +383,7 @@ it('generates a cash balance transaction id', function () {
 it('generates a financial connection account inferred balance id', function () {
     expect($this->fake->stripeFinancialConnectionAccountInferredBalanceId())->toStartWith('fcinba_')->toHaveLength(31)->toBeString();
 })->repeat(2);
+
+it('generates a issuing token id', function () {
+    expect($this->fake->stripeIssuingTokenId())->toStartWith('intok_')->toHaveLength(30)->toBeString();
+})->repeat(2);

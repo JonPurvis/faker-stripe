@@ -387,3 +387,11 @@ it('generates a financial connection account inferred balance id', function () {
 it('generates a issuing token id', function () {
     expect($this->fake->stripeIssuingTokenId())->toStartWith('intok_')->toHaveLength(30)->toBeString();
 })->repeat(2);
+
+it('generates a payment method configuration id', function () {
+    expect($this->fake->stripePaymentMethodConfigurationId())->toStartWith('pmc_')->toHaveLength(28)->toBeString();
+})->repeat(2);
+
+it('generates a payment method domain id', function () {
+    expect($this->fake->stripePaymentMethodDomainId())->toStartWith('pmd_')->toHaveLength(28)->toBeString();
+})->repeat(2);

@@ -39,12 +39,14 @@ the names of resources _should_ match what's in this package.
 | [Tokens](https://stripe.com/docs/api/tokens)                             | `stripeCoreTokenId()`                   | `tok_q1KiYddcC48Tqney3T8Vnkzu`                                 |
 
 ### Payment Methods
-| API Resource                                                        | Method                               | Example                            |
-|---------------------------------------------------------------------|--------------------------------------|------------------------------------|
-| [Payment Methods](https://stripe.com/docs/api/payment_methods)      | `stripePaymentMethodId()`            | `pm_jkztRiUi5yqTNqHJTzTAVolI`      |
-| [Bank Accounts](https://stripe.com/docs/api/customer_bank_accounts) | `stripePaymentMethodBankAccountId()` | `ba_gkcmh6gu31nALx6PJDJckqPn`      |
-| [Cash Balance](https://stripe.com/docs/api/cash_balance)            | `stripeCashBalanceTransactionId()`   | `ccsbtxn_6sKoup9yicpuPC7MykObBsjq` |
-| [Cards](https://stripe.com/docs/api/cards)                          | `stripePaymentMethodCardId()`        | `card_A56nkfbrHtdQ7bv8I9eeQOtW`    |
+| API Resource                                                                 | Method                               | Example                            |
+|------------------------------------------------------------------------------|--------------------------------------|------------------------------------|
+| [Payment Methods](https://stripe.com/docs/api/payment_methods)               | `stripePaymentMethodId()`            | `pm_jkztRiUi5yqTNqHJTzTAVolI`      |
+| [Payment Method Configurations](https://stripe.com/docs/api/payment_method_configurations) | `stripePaymentMethodConfigurationId()`            | `pmc_BS6va641BwHZCexJscZ9LNH8`      |
+| [Payment Method Domains](https://stripe.com/docs/api/payment_method_domains)        | `stripePaymentMethodDomainId()`            | `pmd_FcObWHJ3gtwujiuUhVhWSe2c`      |
+| [Bank Accounts](https://stripe.com/docs/api/customer_bank_accounts)          | `stripePaymentMethodBankAccountId()` | `ba_gkcmh6gu31nALx6PJDJckqPn`      |
+| [Cash Balance](https://stripe.com/docs/api/cash_balance)                     | `stripeCashBalanceTransactionId()`   | `ccsbtxn_6sKoup9yicpuPC7MykObBsjq` |
+| [Cards](https://stripe.com/docs/api/cards)                                   | `stripePaymentMethodCardId()`        | `card_A56nkfbrHtdQ7bv8I9eeQOtW`    |
 
 ### Products
 | API Resource                                                   | Method                           | Example                          |
@@ -113,7 +115,7 @@ the names of resources _should_ match what's in this package.
 | [Cardholders](https://stripe.com/docs/api/issuing/cardholders)       | `stripeIssuingCardholderId()`    | `ich_EyqQ6EcYkhzgyrGEQSCY68EB`   |
 | [Cards](https://stripe.com/docs/api/issuing/cards)                   | `stripeIssuingCardId()`          | `ic_IsXAmEVzInXUPtq4uttDZ2g2`    |
 | [Disputes](https://stripe.com/docs/api/issuing/disputes)             | `stripeIssuingDisputeId()`       | `idp_lXR4WsU6fhdpErzWVNOr24Ux`   |
-| [Tokens](https://stripe.com/docs/api/issuing/tokens)                 | `stripeIssuingTokenId()`   | `ipi_FqGAHy3JUvUsjWdqyaViRFm2`   |
+| [Tokens](https://stripe.com/docs/api/issuing/tokens)                 | `stripeIssuingTokenId()`   | `intok_HMkTW4FnWckzqqNGGFJP4I7E`   |
 | [Transactions](https://stripe.com/docs/api/issuing/transactions)     | `stripeIssuingTransactionId()`   | `ipi_FqGAHy3JUvUsjWdqyaViRFm2`   |
 
 ### Terminal

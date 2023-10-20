@@ -495,4 +495,14 @@ class Stripe extends Base
     {
         return 'intok_' . $this->generateRandomString();
     }
+
+    public function stripePaymentMethodConfigurationId(): string
+    {
+        return 'pmc_' . $this->generateRandomString();
+    }
+
+    public function stripePaymentMethodDomainId(): string
+    {
+        return 'pmd_' . $this->generateRandomString();
+    }
 }

@@ -486,11 +486,6 @@ class Stripe extends Base
         return 'ccsbtxn_' . $this->generateRandomString();
     }
 
-    public function stripeFinancialConnectionAccountInferredBalanceId(): string
-    {
-        return 'fcinba_' . $this->generateRandomString();
-    }
-
     public function stripeIssuingTokenId(): string
     {
         return 'intok_' . $this->generateRandomString();

@@ -113,6 +113,7 @@ the names of resources _should_ match what's in this package.
 | [Cardholders](https://stripe.com/docs/api/issuing/cardholders)       | `stripeIssuingCardholderId()`    | `ich_EyqQ6EcYkhzgyrGEQSCY68EB`   |
 | [Cards](https://stripe.com/docs/api/issuing/cards)                   | `stripeIssuingCardId()`          | `ic_IsXAmEVzInXUPtq4uttDZ2g2`    |
 | [Disputes](https://stripe.com/docs/api/issuing/disputes)             | `stripeIssuingDisputeId()`       | `idp_lXR4WsU6fhdpErzWVNOr24Ux`   |
+| [Tokens](https://stripe.com/docs/api/issuing/tokens)                 | `stripeIssuingTokenId()`   | `ipi_FqGAHy3JUvUsjWdqyaViRFm2`   |
 | [Transactions](https://stripe.com/docs/api/issuing/transactions)     | `stripeIssuingTransactionId()`   | `ipi_FqGAHy3JUvUsjWdqyaViRFm2`   |
 
 ### Terminal

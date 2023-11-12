@@ -419,3 +419,7 @@ it('generates a core cvc token id', function () {
 it('generates a billing credit note line item id', function () {
     expect($this->fake->stripeBillingCreditNoteLineItemId())->toStartWith('il_')->toHaveLength(27)->toBeString();
 })->repeat(2);
+
+it('generates a billing customer portal configuration id', function () {
+    expect($this->fake->stripeBillingCustomerPortalConfigurationId())->toStartWith('bpc_')->toHaveLength(28)->toBeString();
+})->repeat(2);

@@ -535,4 +535,10 @@ class Stripe extends Base
     {
         return 'il_' . $this->generateRandomString();
     }
+
+    public function stripeBillingCustomerPortalConfigurationId(): string
+    {
+        return 'bpc_' . $this->generateRandomString();
+    }
+
 }

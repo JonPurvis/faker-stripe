@@ -413,5 +413,9 @@ it('generates a core person token id', function () {
 })->repeat(2);
 
 it('generates a core cvc token id', function () {
-    expect($this->fake->stripeCoreCvcUpdateTokenId())->toStartWith('cvdctok_')->toHaveLength(31)->toBeString();
+    expect($this->fake->stripeCoreCvcUpdateTokenId())->toStartWith('cvctok_')->toHaveLength(31)->toBeString();
+})->repeat(2);
+
+it('generates a billing credit note line item id', function () {
+    expect($this->fake->stripeBillingCreditNoteLineItemId())->toStartWith('il_')->toHaveLength(27)->toBeString();
 })->repeat(2);

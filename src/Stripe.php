@@ -530,4 +530,9 @@ class Stripe extends Base
     {
         return 'cvctok_' . $this->generateRandomString();
     }
+
+    public function stripeBillingCreditNoteLineItemId(): string
+    {
+        return 'il_' . $this->generateRandomString();
+    }
 }

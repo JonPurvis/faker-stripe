@@ -76,21 +76,22 @@ the names of resources _should_ match what's in this package.
 | [Payment Links](https://stripe.com/docs/api/payment_links/payment_links) | `stripePaymentLinkId()` | `plink_L85n1vZMv4QS0aYwj11TKjTy` |
 
 ### Billing
-| API Resource                                                                               | Method                                        | Example                              |
-|--------------------------------------------------------------------------------------------|-----------------------------------------------|--------------------------------------|
-| [Credit Notes](https://stripe.com/docs/api/credit_notes)                                   | `stripeBillingCreditNoteId()`                 | `cn_37b9KW8lODWCDSilck1hs0on`        |
-| [Customer Balance Transactions](https://stripe.com/docs/api/customer_balance_transactions) | `stripeBillingCustomerBalanceTransactionId()` | `cbtxn_SboO9vmMCUoTg6iGGdsOQ18R`     |
-| [Customer Portal](https://stripe.com/docs/api/customer_portal)                             | `stripeBillingCustomerPortalId()`             | `bps_HFXl8fnSxXjVUvepP0g7cfEH`       |
-| [Customer Tax IDs](https://stripe.com/docs/api/customer_tax_ids)                           | `stripeBillingCustomerTaxIdId()`              | `txi_Vs7BSOcldH5QIN35U8lSlJuc`       |
-| [Invoices](https://stripe.com/docs/api/invoices)                                           | `stripeBillingInvoiceId()`                    | `in_pBNUeaVUmJ8I44Fx1OajNLQn`        |
-| [Invoice Items](https://stripe.com/docs/api/invoiceitems)                                  | `stripeBillingInvoiceItemId()`                | `ii_gOWpZpoGoMOE5IYVS86mmGXS`        |
-| [Plans](https://stripe.com/docs/api/plans)                                                 | `stripeBillingPlanId()`                       | `price_9wWZ7dtmQSWvQDhFBJB49sv8`     |
-| [Quotes](https://stripe.com/docs/api/quotes)                                               | `stripeBillingQuoteId()`                      | `qt_qrx3tn3rnQ1USENFK1gJcXLv`        |
-| [Subscriptions](https://stripe.com/docs/api/subscriptions)                                 | `stripeBillingSubscriptionId()`               | `sub_wMwsJiaZpdRfrF7WXkP0ibmc`       |
-| [Subscription Items](https://stripe.com/docs/api/subscription_items)                       | `stripeBillingSubscriptionItemId()`           | `si_3OdBLaD7p37H2A`                  |
-| [Subscription Schedules](https://stripe.com/docs/api/subscription_schedules)               | `stripeBillingSubscriptionScheduleId()`       | `sub_sched_OnyC6GSR3kjse08ehVNsB5U0` |
-| [Test Clocks](https://stripe.com/docs/api/test_clocks)                                     | `stripeBillingTestClockId()`                  | `clock_6QR6dCPpUhhBg81wmyFF4VtJ`     |
-| [Usage Records](https://stripe.com/docs/api/usage_records)                                 | `stripeBillingUsageRecordId()`                | `mbur_ppVgDLt5HcG8zP48Grk7NZfP`      |
+| API Resource                                                                                 | Method                                        | Example                              |
+|----------------------------------------------------------------------------------------------|-----------------------------------------------|--------------------------------------|
+| [Credit Notes](https://stripe.com/docs/api/credit_notes)                                     | `stripeBillingCreditNoteId()`                 | `cn_37b9KW8lODWCDSilck1hs0on`        |
+| [Credit Note Line Items](https://stripe.com/docs/api/credit_notes/line_item)                 | `stripeBillingCreditNoteLineItemId()`         | `il_75E91IzYCJaaSbESOZl5GQiF`        |
+| [Customer Balance Transactions](https://stripe.com/docs/api/customer_balance_transactions)   | `stripeBillingCustomerBalanceTransactionId()` | `cbtxn_SboO9vmMCUoTg6iGGdsOQ18R`     |
+| [Customer Portal](https://stripe.com/docs/api/customer_portal)                               | `stripeBillingCustomerPortalId()`             | `bps_HFXl8fnSxXjVUvepP0g7cfEH`       |
+| [Customer Tax IDs](https://stripe.com/docs/api/customer_tax_ids)                             | `stripeBillingCustomerTaxIdId()`              | `txi_Vs7BSOcldH5QIN35U8lSlJuc`       |
+| [Invoices](https://stripe.com/docs/api/invoices)                                             | `stripeBillingInvoiceId()`                    | `in_pBNUeaVUmJ8I44Fx1OajNLQn`        |
+| [Invoice Items](https://stripe.com/docs/api/invoiceitems)                                    | `stripeBillingInvoiceItemId()`                | `ii_gOWpZpoGoMOE5IYVS86mmGXS`        |
+| [Plans](https://stripe.com/docs/api/plans)                                                   | `stripeBillingPlanId()`                       | `price_9wWZ7dtmQSWvQDhFBJB49sv8`     |
+| [Quotes](https://stripe.com/docs/api/quotes)                                                 | `stripeBillingQuoteId()`                      | `qt_qrx3tn3rnQ1USENFK1gJcXLv`        |
+| [Subscriptions](https://stripe.com/docs/api/subscriptions)                                   | `stripeBillingSubscriptionId()`               | `sub_wMwsJiaZpdRfrF7WXkP0ibmc`       |
+| [Subscription Items](https://stripe.com/docs/api/subscription_items)                         | `stripeBillingSubscriptionItemId()`           | `si_3OdBLaD7p37H2A`                  |
+| [Subscription Schedules](https://stripe.com/docs/api/subscription_schedules)                 | `stripeBillingSubscriptionScheduleId()`       | `sub_sched_OnyC6GSR3kjse08ehVNsB5U0` |
+| [Test Clocks](https://stripe.com/docs/api/test_clocks)                                       | `stripeBillingTestClockId()`                  | `clock_6QR6dCPpUhhBg81wmyFF4VtJ`     |
+| [Usage Records](https://stripe.com/docs/api/usage_records)                                   | `stripeBillingUsageRecordId()`                | `mbur_ppVgDLt5HcG8zP48Grk7NZfP`      |
 
 ### Connect
 | API Resource                                                         | Method                                  | Example                              |

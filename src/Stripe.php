@@ -500,4 +500,9 @@ class Stripe extends Base
     {
         return 'pmd_' . $this->generateRandomString();
     }
+
+    public function stripeCoreSetupIntentClientSecret(): string
+    {
+        return 'seti_' . $this->generateRandomString() . '_secret_' .  $this->generateRandomString(31);
+    }
 }

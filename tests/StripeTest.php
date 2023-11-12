@@ -391,3 +391,7 @@ it('generates a payment method configuration id', function () {
 it('generates a payment method domain id', function () {
     expect($this->fake->stripePaymentMethodDomainId())->toStartWith('pmd_')->toHaveLength(28)->toBeString();
 })->repeat(2);
+
+it('generates a setup intent client secret', function () {
+    expect($this->fake->stripeCoreSetupIntentClientSecret())->toStartWith('seti_')->toHaveLength(68)->toBeString();
+})->repeat(2);

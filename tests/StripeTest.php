@@ -391,3 +391,35 @@ it('generates a payment method configuration id', function () {
 it('generates a payment method domain id', function () {
     expect($this->fake->stripePaymentMethodDomainId())->toStartWith('pmd_')->toHaveLength(28)->toBeString();
 })->repeat(2);
+
+it('generates a setup intent client secret', function () {
+    expect($this->fake->stripeCoreSetupIntentClientSecret())->toStartWith('seti_')->toHaveLength(68)->toBeString();
+})->repeat(2);
+
+it('generates a core bank account token id', function () {
+    expect($this->fake->stripeCoreBankAccountTokenId())->toStartWith('btok_')->toHaveLength(29)->toBeString();
+})->repeat(2);
+
+it('generates a core pii token id', function () {
+    expect($this->fake->stripeCorePersonallyIdentifiableInformationTokenId())->toStartWith('pii_')->toHaveLength(28)->toBeString();
+})->repeat(2);
+
+it('generates a core account token id', function () {
+    expect($this->fake->stripeCoreAccountTokenId())->toStartWith('ct_')->toHaveLength(27)->toBeString();
+})->repeat(2);
+
+it('generates a core person token id', function () {
+    expect($this->fake->stripeCorePersonTokenId())->toStartWith('cpt_')->toHaveLength(28)->toBeString();
+})->repeat(2);
+
+it('generates a core cvc token id', function () {
+    expect($this->fake->stripeCoreCvcUpdateTokenId())->toStartWith('cvctok_')->toHaveLength(31)->toBeString();
+})->repeat(2);
+
+it('generates a billing credit note line item id', function () {
+    expect($this->fake->stripeBillingCreditNoteLineItemId())->toStartWith('il_')->toHaveLength(27)->toBeString();
+})->repeat(2);
+
+it('generates a billing customer portal configuration id', function () {
+    expect($this->fake->stripeBillingCustomerPortalConfigurationId())->toStartWith('bpc_')->toHaveLength(28)->toBeString();
+})->repeat(2);

@@ -500,4 +500,45 @@ class Stripe extends Base
     {
         return 'pmd_' . $this->generateRandomString();
     }
+
+    public function stripeCoreSetupIntentClientSecret(): string
+    {
+        return 'seti_' . $this->generateRandomString() . '_secret_' .  $this->generateRandomString(31);
+    }
+
+    public function stripeCoreBankAccountTokenId(): string
+    {
+        return 'btok_' . $this->generateRandomString();
+    }
+
+    public function stripeCorePersonallyIdentifiableInformationTokenId(): string
+    {
+        return 'pii_' . $this->generateRandomString();
+    }
+
+    public function stripeCoreAccountTokenId(): string
+    {
+        return 'ct_' . $this->generateRandomString();
+    }
+
+    public function stripeCorePersonTokenId(): string
+    {
+        return 'cpt_' . $this->generateRandomString();
+    }
+
+    public function stripeCoreCvcUpdateTokenId(): string
+    {
+        return 'cvctok_' . $this->generateRandomString();
+    }
+
+    public function stripeBillingCreditNoteLineItemId(): string
+    {
+        return 'il_' . $this->generateRandomString();
+    }
+
+    public function stripeBillingCustomerPortalConfigurationId(): string
+    {
+        return 'bpc_' . $this->generateRandomString();
+    }
+
 }

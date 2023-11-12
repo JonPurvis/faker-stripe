@@ -395,3 +395,23 @@ it('generates a payment method domain id', function () {
 it('generates a setup intent client secret', function () {
     expect($this->fake->stripeCoreSetupIntentClientSecret())->toStartWith('seti_')->toHaveLength(68)->toBeString();
 })->repeat(2);
+
+it('generates a core bank account token id', function () {
+    expect($this->fake->stripeCoreBankAccountTokenId())->toStartWith('btok_')->toHaveLength(29)->toBeString();
+})->repeat(2);
+
+it('generates a core pii token id', function () {
+    expect($this->fake->stripeCorePersonallyIdentifiableInformationTokenId())->toStartWith('pii_')->toHaveLength(28)->toBeString();
+})->repeat(2);
+
+it('generates a core account token id', function () {
+    expect($this->fake->stripeCoreAccountTokenId())->toStartWith('ct_')->toHaveLength(27)->toBeString();
+})->repeat(2);
+
+it('generates a core person token id', function () {
+    expect($this->fake->stripeCorePersonTokenId())->toStartWith('cpt_')->toHaveLength(28)->toBeString();
+})->repeat(2);
+
+it('generates a core cvc token id', function () {
+    expect($this->fake->stripeCoreCvcUpdateTokenId())->toStartWith('cvdctok_')->toHaveLength(31)->toBeString();
+})->repeat(2);

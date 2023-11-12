@@ -57,7 +57,7 @@ the names of resources _should_ match what's in this package.
 ### Products
 | API Resource                                                            | Method                           | Example                          |
 |:------------------------------------------------------------------------|----------------------------------|----------------------------------|
-| [Products](https://stripe.com/docs/api/products)                        | `stripePaymentMethodId()`        | `pm_3ffsQykg0u0OlEEkHph2Uhvl`    |
+| [Products](https://stripe.com/docs/api/products)                        | `stripeProductId()`              | `prod_Kp7fBKUx6qs3FC`            |
 | [Prices](https://stripe.com/docs/api/prices)                            | `stripeProductPriceId()`         | `price_YhlhAgy0lHbLcOWwFZ596x1S` |
 | [Promotion Codes](https://stripe.com/docs/api/promotion_codes)          | `stripeProductPromotionCodeId()` | `promo_7ADzsJ6WuQIsKsIj4T4MTeIX` |
 | [Discounts](https://stripe.com/docs/api/discounts)                      | `stripeProductDiscountId()`      | `di_DleWj1FqYhsriqRSaQr6jCgs`    |

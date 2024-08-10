@@ -24,7 +24,7 @@ class Stripe extends Base
 
     public function stripeConnectAccountId(): string
     {
-        return 'acct_' . $this->generateRandomString(16);
+        return 'acct_' . $this->generateRandomString(length: 16);
     }
 
     public function stripeConnectApplicationFeeId(): string
@@ -34,7 +34,7 @@ class Stripe extends Base
 
     public function stripeCoreBalanceTransactionId(): string
     {
-        return 'txn_' . $this->generateRandomString(25);
+        return 'txn_' . $this->generateRandomString(length: 25);
     }
 
     public function stripeCoreChargeId(): string
@@ -44,7 +44,7 @@ class Stripe extends Base
 
     public function stripeCoreCustomerId(): string
     {
-        return 'cus_' . $this->generateRandomString(14);
+        return 'cus_' . $this->generateRandomString(length: 14);
     }
 
     public function stripeCoreDisputeId(): string
@@ -129,7 +129,7 @@ class Stripe extends Base
 
     public function stripeProductId(): string
     {
-        return 'prod_' . $this->generateRandomString(14);
+        return 'prod_' . $this->generateRandomString(length: 14);
     }
 
     public function stripeProductPriceId(): string
@@ -149,7 +149,7 @@ class Stripe extends Base
 
     public function stripeProductTaxCodeId(): string
     {
-        return 'txcd_' . $this->generateRandomString(8, true);
+        return 'txcd_' . $this->generateRandomString(length: 8, numericOnly: true);
     }
 
     public function stripeProductTaxRateId(): string
@@ -164,7 +164,7 @@ class Stripe extends Base
 
     public function stripeCheckoutSessionId(): string
     {
-        return 'cs_' . $this->generateRandomString(58);
+        return 'cs_' . $this->generateRandomString(length: 58);
     }
 
     public function stripePaymentLinkId(): string
@@ -209,7 +209,7 @@ class Stripe extends Base
 
     public function stripeBillingSubscriptionItemId(): string
     {
-        return 'si_' . $this->generateRandomString(14);
+        return 'si_' . $this->generateRandomString(length: 14);
     }
 
     public function stripeBillingSubscriptionScheduleId(): string
@@ -323,22 +323,22 @@ class Stripe extends Base
 
     public function stripeTerminalHardwareProductId(): string
     {
-        return 'thpr_' . $this->generateRandomString(14);
+        return 'thpr_' . $this->generateRandomString(length: 14);
     }
 
     public function stripeTerminalHardwareSkuId(): string
     {
-        return 'thsku_' . $this->generateRandomString(14);
+        return 'thsku_' . $this->generateRandomString(length: 14);
     }
 
     public function stripeTerminalHardwareShippingMethodId(): string
     {
-        return 'thsm_' . $this->generateRandomString(14);
+        return 'thsm_' . $this->generateRandomString(length: 14);
     }
 
     public function stripeTerminalConfigurationId(): string
     {
-        return 'tmc_' . $this->generateRandomString(14);
+        return 'tmc_' . $this->generateRandomString(length: 14);
     }
 
     public function stripeTreasuryFinancialAccountId(): string
@@ -453,12 +453,12 @@ class Stripe extends Base
 
     public function stripeTaxTransactionLineItemId(): string
     {
-        return 'tax_li_' . $this->generateRandomString(14);
+        return 'tax_li_' . $this->generateRandomString(length: 14);
     }
 
     public function stripeWebhookApplicationId(): string
     {
-        return 'ca_' . $this->generateRandomString(32);
+        return 'ca_' . $this->generateRandomString(length: 32);
     }
 
     public function stripeCryptoOnrampSessionId(): string
@@ -468,12 +468,12 @@ class Stripe extends Base
 
     public function stripeCorePaymentIntentClientSecret(): string
     {
-        return 'pi_' . $this->generateRandomString() . '_secret_' .  $this->generateRandomString(25);
+        return 'pi_' . $this->generateRandomString() . '_secret_' .  $this->generateRandomString(length: 25);
     }
 
     public function stripeCryptoOnrampSessionClientSecret(): string
     {
-        return 'cos_' . $this->generateRandomString() . '_secret_' .  $this->generateRandomString(35);
+        return 'cos_' . $this->generateRandomString() . '_secret_' .  $this->generateRandomString(length: 35);
     }
 
     public function stripeConnectCapabilityId(): string
@@ -503,7 +503,7 @@ class Stripe extends Base
 
     public function stripeCoreSetupIntentClientSecret(): string
     {
-        return 'seti_' . $this->generateRandomString() . '_secret_' .  $this->generateRandomString(31);
+        return 'seti_' . $this->generateRandomString() . '_secret_' .  $this->generateRandomString(length: 31);
     }
 
     public function stripeCoreBankAccountTokenId(): string
@@ -541,4 +541,73 @@ class Stripe extends Base
         return 'bpc_' . $this->generateRandomString();
     }
 
+    public function stripeCoreConfirmationTokenId(): string
+    {
+        return 'ctoken_' . $this->generateRandomString();
+    }
+
+    public function stripeBillingInvoiceLineItemId(): string
+    {
+        return 'il_tmp_' . $this->generateRandomString();
+    }
+
+    public function stripeBillingAlertId(): string
+    {
+        return 'alrt_' . $this->generateRandomString(length: 5, numericOnly: true);
+    }
+
+    public function stripeBillingMeterId(): string
+    {
+        return 'mtr_' . $this->generateRandomString(length: 5, numericOnly: true);
+    }
+
+    public function stripeBillingMeterEventSummaryId(): string
+    {
+        return 'mtrusg_' . $this->generateRandomString(length: 185);
+    }
+
+    public function stripeIssuingPersonalizationDesignsId(): string
+    {
+        return 'ipcd_' . $this->generateRandomString(length: 14);
+    }
+
+    public function stripeIssuingPhysicalBundlesId(): string
+    {
+        return 'ics_' . $this->generateRandomString(length: 14);
+    }
+
+    public function stripeEntitlementFeatureId(): string
+    {
+        return 'feat_' . $this->generateRandomString(length: 32);
+    }
+
+    public function stripeEntitlementProductFeatureId(): string
+    {
+        return 'prodft_' . $this->generateRandomString(length: 14);
+    }
+
+    public function stripeEntitlementActiveEntitlementId(): string
+    {
+        return 'ent_' . $this->generateRandomString(length: 32);
+    }
+
+    public function stripeClimateOrderId(): string
+    {
+        return 'climorder_' . $this->generateRandomString();
+    }
+
+    public function stripeClimateProductId(): string
+    {
+        return 'climsku_' . $this->generateRandomString();
+    }
+
+    public function stripeClimateSupplierId(): string
+    {
+        return 'climsup_' . $this->generateRandomString();
+    }
+
+    public function stripeForwardingRequestId(): string
+    {
+        return 'fwd_req_' . $this->generateRandomString(length: 5, numericOnly: true);
+    }
 }

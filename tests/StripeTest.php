@@ -479,3 +479,31 @@ it('generates a climate supplier id', function () {
 it('generates a forwarding request id', function () {
     expect($this->fake->stripeForwardingRequestId())->toStartWith('fwd_req_')->toHaveLength(13)->toBeString();
 });
+
+it('generates a credit grant id', function () {
+    expect($this->fake->stripeBillingCreditGrantId())->toStartWith('credgr_')->toHaveLength(31)->toBeString();
+});
+
+it('generates an event destination id', function () {
+    expect($this->fake->stripeCoreEventDestinationId())->toStartWith('ed_')->toHaveLength(27)->toBeString();
+});
+
+it('generates a usage record summary id', function () {
+    expect($this->fake->stripeBillingUsageRecordSummaryId())->toStartWith('sis_')->toHaveLength(28)->toBeString();
+});
+
+it('generates a source id', function () {
+    expect($this->fake->stripeBillingSourceId())->toStartWith('src_')->toHaveLength(28)->toBeString();
+});
+
+it('generates a invoice rendering template id', function () {
+    expect($this->fake->stripeBillingInvoiceRenderingTemplateId())->toStartWith('inrtem_')->toHaveLength(31)->toBeString();
+});
+
+it('generates a credit balance transaction id', function () {
+    expect($this->fake->stripeBillingCreditBalanceTransactionId())->toStartWith('cbtxn_')->toHaveLength(30)->toBeString();
+});
+
+it('generates a financing offer id', function () {
+    expect($this->fake->stripeFinancingOfferId())->toStartWith('financingoffer_')->toHaveLength(39)->toBeString();
+});

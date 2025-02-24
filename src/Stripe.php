@@ -468,12 +468,12 @@ class Stripe extends Base
 
     public function stripeCorePaymentIntentClientSecret(): string
     {
-        return 'pi_' . $this->generateRandomString() . '_secret_' .  $this->generateRandomString(length: 25);
+        return 'pi_' . $this->generateRandomString() . '_secret_' . $this->generateRandomString(length: 25);
     }
 
     public function stripeCryptoOnrampSessionClientSecret(): string
     {
-        return 'cos_' . $this->generateRandomString() . '_secret_' .  $this->generateRandomString(length: 35);
+        return 'cos_' . $this->generateRandomString() . '_secret_' . $this->generateRandomString(length: 35);
     }
 
     public function stripeConnectCapabilityId(): string
@@ -503,7 +503,7 @@ class Stripe extends Base
 
     public function stripeCoreSetupIntentClientSecret(): string
     {
-        return 'seti_' . $this->generateRandomString() . '_secret_' .  $this->generateRandomString(length: 31);
+        return 'seti_' . $this->generateRandomString() . '_secret_' . $this->generateRandomString(length: 31);
     }
 
     public function stripeCoreBankAccountTokenId(): string
@@ -609,5 +609,40 @@ class Stripe extends Base
     public function stripeForwardingRequestId(): string
     {
         return 'fwd_req_' . $this->generateRandomString(length: 5, numericOnly: true);
+    }
+
+    public function stripeCoreEventDestinationId(): string
+    {
+        return 'ed_' . $this->generateRandomString();
+    }
+
+    public function stripeBillingSourceId(): string
+    {
+        return 'src_' . $this->generateRandomString();
+    }
+
+    public function stripeBillingInvoiceRenderingTemplateId(): string
+    {
+        return 'inrtem_' . $this->generateRandomString();
+    }
+
+    public function stripeBillingCreditGrantId(): string
+    {
+        return 'credgr_' . $this->generateRandomString();
+    }
+
+    public function stripeBillingCreditBalanceTransactionId(): string
+    {
+        return 'cbtxn_' . $this->generateRandomString();
+    }
+
+    public function stripeBillingUsageRecordSummaryId(): string
+    {
+        return 'sis_' . $this->generateRandomString();
+    }
+
+    public function stripeFinancingOfferId(): string
+    {
+        return 'financingoffer_' . $this->generateRandomString();
     }
 }

@@ -12,7 +12,9 @@
 ## 👋 Introduction
 This package allows FakerPHP to generate fake IDs which have the same structure you can expect to be returned from 
 Stripe. The wonderful [Pest](https://pestphp.com/) is used to run tests contained within this package, which requires
-a minimum PHP Version of 8.1. 
+a minimum PHP Version of 8.2. 
+
+This package is listed on the [official FakerPHP website](https://fakerphp.org/third-party/) as a third party library.
 
 ## ✨Features
 This package can currently generate fake IDs for the following Stripe resources. To avoid any confusion,
@@ -27,7 +29,6 @@ the names of resources _should_ match what's in this package.
 | [Customers](https://stripe.com/docs/api/customers)                                       | `stripeCoreCustomerId()`                                  | `cus_uW8qUwsTwKKtY3`                                                     |
 | [Disputes](https://stripe.com/docs/api/disputes)                                         | `stripeCoreDisputeId()`                                   | `dp_e3ZeEytdlpOxMtRg9M88RMcq`                                            |
 | [Event Destinations](https://docs.stripe.com/api/v2/core/event_destinations)             | `stripeCoreEventDestinationId()`                          | `ed_d1RhD6TdVjw78ZxrnkOt62mFS`                                           |
-
 | [Events](https://stripe.com/docs/api/events)                                             | `stripeCoreEventId()`                                     | `evt_diyd59RDTVw8ZxrnkOt62mFS`                                           |
 | [Files](https://stripe.com/docs/api/files)                                               | `stripeCoreFileId()`                                      | `file_qrbRTo7XbytwvE6w3SQU8QXK`                                          |
 | [File Links](https://stripe.com/docs/api/file_links)                                     | `stripeCoreFileLinkId()`                                  | `link_Z5Tesn6zQYYdov5R3bCblM8A`                                          | 
@@ -54,7 +55,7 @@ the names of resources _should_ match what's in this package.
 | [Payment Method Configurations](https://stripe.com/docs/api/payment_method_configurations) | `stripePaymentMethodConfigurationId()`              | `pmc_BS6va641BwHZCexJscZ9LNH8`                      |
 | [Payment Method Domains](https://stripe.com/docs/api/payment_method_domains)               | `stripePaymentMethodDomainId()`                     | `pmd_FcObWHJ3gtwujiuUhVhWSe2c`                      |
 | [Bank Accounts](https://stripe.com/docs/api/customer_bank_accounts)                        | `stripePaymentMethodBankAccountId()`                | `ba_gkcmh6gu31nALx6PJDJckqPn`                       |
-| [Cash Balance](https://stripe.com/docs/api/cash_balance)                                   | `stripeCashBalanceTransactionId()`                  | `ccsbtxn_6sKoup9yicpuPC7MykObBsjq`                  |
+| [Cash Balance Transactions](https://docs.stripe.com/api/cash_balance_transactions)         | `stripeCashBalanceTransactionId()`                  | `ccsbtxn_6sKoup9yicpuPC7MykObBsjq`                  |
 | [Cards](https://stripe.com/docs/api/cards)                                                 | `stripePaymentMethodCardId()`                       | `card_A56nkfbrHtdQ7bv8I9eeQOtW`                     |
 
 ### Products

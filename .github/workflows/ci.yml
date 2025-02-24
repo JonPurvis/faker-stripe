@@ -1,5 +1,7 @@
-on: push
 name: CI
+
+on: ['push', 'pull_request']
+
 jobs:
   pest:
     runs-on: ubuntu-latest

@@ -6,7 +6,7 @@ jobs:
   pest:
     runs-on: ubuntu-latest
     container:
-      image: kirschbaumdevelopment/laravel-test-runner:8.2
+      image: kirschbaumdevelopment/laravel-test-runner:8.3
 
     steps:
       - uses: actions/checkout@v1

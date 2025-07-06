@@ -221,10 +221,6 @@ class Stripe extends Base
     {
         return 'clock_' . $this->generateRandomString();
     }
-    public function stripeBillingUsageRecordId(): string
-    {
-        return 'mbur_' . $this->generateRandomString();
-    }
 
     public function stripeConnectApplicationFeeRefundId(): string
     {
@@ -636,13 +632,48 @@ class Stripe extends Base
         return 'cbtxn_' . $this->generateRandomString();
     }
 
-    public function stripeBillingUsageRecordSummaryId(): string
-    {
-        return 'sis_' . $this->generateRandomString();
-    }
-
     public function stripeFinancingOfferId(): string
     {
         return 'financingoffer_' . $this->generateRandomString();
+    }
+
+    public function stripeCoreFxQuoteId(): string
+    {
+        return 'fxq_' . $this->generateRandomString();
+    }
+
+    public function stripeBillingMeterAdjustmentId(): string
+    {
+        return 'mtr_event_adj_' . $this->generateRandomString(8, true);
+    }
+
+    public function stripeSigmaQueryId(): string
+    {
+        return 'qry_' . $this->generateRandomString();
+    }
+
+    public function stripePrivacyRedactionJobId(): string
+    {
+        return 'prj_' . $this->generateRandomString(3, true);
+    }
+
+    public function stripePrivacyRedactionJobValidationErrorId(): string
+    {
+        return 'prjve_' . $this->generateRandomString(3, true);
+    }
+
+    public function stripeBillingInvoicePaymentId(): string
+    {
+        return 'inpay_' . $this->generateRandomString();
+    }
+
+    public function stripeExternalAccountCardId(): string
+    {
+        return 'card_' . $this->generateRandomString();
+    }
+
+    public function stripeTaxRegistrationId(): string
+    {
+        return 'taxreg_' . $this->generateRandomString(14);
     }
 }

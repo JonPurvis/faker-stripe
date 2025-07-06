@@ -168,10 +168,6 @@ it('generates a billing test clock id', function () {
     expect($this->fake->stripeBillingTestClockId())->toStartWith('clock_')->toHaveLength(30)->toBeString();
 });
 
-it('generates a billing usage record id', function () {
-    expect($this->fake->stripeBillingUsageRecordId())->toStartWith('mbur_')->toHaveLength(29)->toBeString();
-});
-
 it('generates a connect application fee refund id', function () {
     expect($this->fake->stripeConnectApplicationFeeRefundId())->toStartWith('fr_')->toHaveLength(27)->toBeString();
 });
@@ -488,10 +484,6 @@ it('generates an event destination id', function () {
     expect($this->fake->stripeCoreEventDestinationId())->toStartWith('ed_')->toHaveLength(27)->toBeString();
 });
 
-it('generates a usage record summary id', function () {
-    expect($this->fake->stripeBillingUsageRecordSummaryId())->toStartWith('sis_')->toHaveLength(28)->toBeString();
-});
-
 it('generates a source id', function () {
     expect($this->fake->stripeBillingSourceId())->toStartWith('src_')->toHaveLength(28)->toBeString();
 });
@@ -506,4 +498,36 @@ it('generates a credit balance transaction id', function () {
 
 it('generates a financing offer id', function () {
     expect($this->fake->stripeFinancingOfferId())->toStartWith('financingoffer_')->toHaveLength(39)->toBeString();
+});
+
+it('generates a core fx quote id', function () {
+    expect($this->fake->stripeCoreFxQuoteId())->toStartWith('fxq_')->toHaveLength(28)->toBeString();
+});
+
+it('generates a billing meter event adjustment id', function () {
+    expect($this->fake->stripeBillingMeterAdjustmentId())->toStartWith('mtr_event_adj_')->toHaveLength(22)->toBeString();
+});
+
+it('generates a sigma query id', function () {
+    expect($this->fake->stripeSigmaQueryId())->toStartWith('qry_')->toHaveLength(28)->toBeString();
+});
+
+it('generates a privacy redaction job id', function () {
+    expect($this->fake->stripePrivacyRedactionJobId())->toStartWith('prj_')->toHaveLength(7)->toBeString();
+});
+
+it('generates a privacy redaction job validation error id', function () {
+    expect($this->fake->stripePrivacyRedactionJobValidationErrorId())->toStartWith('prjve_')->toHaveLength(9)->toBeString();
+});
+
+it('generates a billing invoice payment id', function () {
+    expect($this->fake->stripeBillingInvoicePaymentId())->toStartWith('inpay_')->toHaveLength(30)->toBeString();
+});
+
+it('generates an external account card id', function () {
+    expect($this->fake->stripeExternalAccountCardId())->toStartWith('card_')->toHaveLength(29)->toBeString();
+});
+
+it('generates a tax registration id', function () {
+    expect($this->fake->stripeTaxRegistrationId())->toStartWith('taxreg_')->toHaveLength(21)->toBeString();
 });

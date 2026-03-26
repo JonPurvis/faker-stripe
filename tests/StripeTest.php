@@ -8,14 +8,6 @@ beforeEach(function () {
     $this->fake->addProvider(new Stripe($this->fake));
 });
 
-it('generates a connect account id', function () {
-    expect($this->fake->stripeConnectAccountId())->toStartWith('acct_')->toHaveLength(21)->toBeString();
-});
-
-it('generates a connect application fee id', function () {
-    expect($this->fake->stripeConnectApplicationFeeId())->toStartWith('fee_')->toHaveLength(28)->toBeString();
-});
-
 it('generates a core balance transaction id', function () {
     expect($this->fake->stripeCoreBalanceTransactionId())->toStartWith('txn_')->toHaveLength(29)->toBeString();
 });
@@ -36,6 +28,10 @@ it('generates a core event id', function () {
     expect($this->fake->stripeCoreEventId())->toStartWith('evt_')->toHaveLength(28)->toBeString();
 });
 
+it('generates an event destination id', function () {
+    expect($this->fake->stripeCoreEventDestinationId())->toStartWith('ed_')->toHaveLength(27)->toBeString();
+});
+
 it('generates a core file id', function () {
     expect($this->fake->stripeCoreFileId())->toStartWith('file_')->toHaveLength(29)->toBeString();
 });
@@ -44,12 +40,8 @@ it('generates a core file link id', function () {
     expect($this->fake->stripeCoreFileLinkId())->toStartWith('link_')->toHaveLength(29)->toBeString();
 });
 
-it('generates a billing invoice id', function () {
-    expect($this->fake->stripeBillingInvoiceId())->toStartWith('in_')->toHaveLength(27)->toBeString();
-});
-
-it('generates a billing invoice item id', function () {
-    expect($this->fake->stripeBillingInvoiceItemId())->toStartWith('ii_')->toHaveLength(27)->toBeString();
+it('generates a core fx quote id', function () {
+    expect($this->fake->stripeCoreFxQuoteId())->toStartWith('fxq_')->toHaveLength(28)->toBeString();
 });
 
 it('generates a core mandate id', function () {
@@ -60,6 +52,22 @@ it('generates a core payment intent id', function () {
     expect($this->fake->stripeCorePaymentIntentId())->toStartWith('pi_')->toHaveLength(27)->toBeString();
 });
 
+it('generates a payment intent client secret', function () {
+    expect($this->fake->stripeCorePaymentIntentClientSecret())->toStartWith('pi_')->toContain('_secret_')->toHaveLength(60)->toBeString();
+});
+
+it('generates a core setup intent id', function () {
+    expect($this->fake->stripeCoreSetupIntentId())->toStartWith('seti_')->toHaveLength(29)->toBeString();
+});
+
+it('generates a setup intent client secret', function () {
+    expect($this->fake->stripeCoreSetupIntentClientSecret())->toStartWith('seti_')->toHaveLength(68)->toBeString();
+});
+
+it('generates a core setup attempt id', function () {
+    expect($this->fake->stripeCoreSetupAttemptId())->toStartWith('setatt_')->toHaveLength(31)->toBeString();
+});
+
 it('generates a core payout id', function () {
     expect($this->fake->stripeCorePayoutId())->toStartWith('po_')->toHaveLength(27)->toBeString();
 });
@@ -68,24 +76,60 @@ it('generates a core refund id', function () {
     expect($this->fake->stripeCoreRefundId())->toStartWith('re_')->toHaveLength(27)->toBeString();
 });
 
-it('generates a core setup intent id', function () {
-    expect($this->fake->stripeCoreSetupIntentId())->toStartWith('seti_')->toHaveLength(29)->toBeString();
+it('generates a core payment record id', function () {
+    expect($this->fake->stripeCorePaymentRecordId())->toStartWith('pr_')->toHaveLength(27)->toBeString();
 });
 
-it('generates a core setup attempt id', function () {
-    expect($this->fake->stripeCoreSetupAttemptId())->toStartWith('setatt_')->toHaveLength(31)->toBeString();
+it('generates a core payment attempt record id', function () {
+    expect($this->fake->stripeCorePaymentAttemptRecordId())->toStartWith('par_')->toHaveLength(28)->toBeString();
+});
+
+it('generates a confirmation token id', function () {
+    expect($this->fake->stripeCoreConfirmationTokenId())->toStartWith('ctoken_')->toHaveLength(31)->toBeString();
+});
+
+it('generates a core account token id', function () {
+    expect($this->fake->stripeCoreAccountTokenId())->toStartWith('ct_')->toHaveLength(27)->toBeString();
+});
+
+it('generates a core bank account token id', function () {
+    expect($this->fake->stripeCoreBankAccountTokenId())->toStartWith('btok_')->toHaveLength(29)->toBeString();
 });
 
 it('generates a core token id', function () {
     expect($this->fake->stripeCoreTokenId())->toStartWith('tok_')->toHaveLength(28)->toBeString();
 });
 
+it('generates a core cvc token id', function () {
+    expect($this->fake->stripeCoreCvcUpdateTokenId())->toStartWith('cvctok_')->toHaveLength(31)->toBeString();
+});
+
+it('generates a core person token id', function () {
+    expect($this->fake->stripeCorePersonTokenId())->toStartWith('cpt_')->toHaveLength(28)->toBeString();
+});
+
+it('generates a core pii token id', function () {
+    expect($this->fake->stripeCorePersonallyIdentifiableInformationTokenId())->toStartWith('pii_')->toHaveLength(28)->toBeString();
+});
+
 it('generates a payment method id', function () {
     expect($this->fake->stripePaymentMethodId())->toStartWith('pm_')->toHaveLength(27)->toBeString();
 });
 
+it('generates a payment method configuration id', function () {
+    expect($this->fake->stripePaymentMethodConfigurationId())->toStartWith('pmc_')->toHaveLength(28)->toBeString();
+});
+
+it('generates a payment method domain id', function () {
+    expect($this->fake->stripePaymentMethodDomainId())->toStartWith('pmd_')->toHaveLength(28)->toBeString();
+});
+
 it('generates a payment method bank account id', function () {
     expect($this->fake->stripePaymentMethodBankAccountId())->toStartWith('ba_')->toHaveLength(27)->toBeString();
+});
+
+it('generates a cash balance transaction id', function () {
+    expect($this->fake->stripeCashBalanceTransactionId())->toStartWith('ccsbtxn_')->toHaveLength(32)->toBeString();
 });
 
 it('generates a payment method card id', function () {
@@ -132,16 +176,64 @@ it('generates a billing credit note id', function () {
     expect($this->fake->stripeBillingCreditNoteId())->toStartWith('cn_')->toHaveLength(27)->toBeString();
 });
 
-it('generates a billing customer balance transaction id', function () {
-    expect($this->fake->stripeBillingCustomerBalanceTransactionId())->toStartWith('cbtxn_')->toHaveLength(30)->toBeString();
+it('generates a billing credit note line item id', function () {
+    expect($this->fake->stripeBillingCreditNoteLineItemId())->toStartWith('il_')->toHaveLength(27)->toBeString();
+});
+
+it('generates a billing credit balance transaction id', function () {
+    expect($this->fake->stripeBillingCreditBalanceTransactionId())->toStartWith('cbtxn_')->toHaveLength(30)->toBeString();
 });
 
 it('generates a billing customer portal id', function () {
     expect($this->fake->stripeBillingCustomerPortalId())->toStartWith('bps_')->toHaveLength(28)->toBeString();
 });
 
-it('generates a billing customer tax id id', function () {
-    expect($this->fake->stripeBillingCustomerTaxIdId())->toStartWith('txi_')->toHaveLength(28)->toBeString();
+it('generates a billing customer portal configuration id', function () {
+    expect($this->fake->stripeBillingCustomerPortalConfigurationId())->toStartWith('bpc_')->toHaveLength(28)->toBeString();
+});
+
+it('generates a billing invoice id', function () {
+    expect($this->fake->stripeBillingInvoiceId())->toStartWith('in_')->toHaveLength(27)->toBeString();
+});
+
+it('generates a billing invoice item id', function () {
+    expect($this->fake->stripeBillingInvoiceItemId())->toStartWith('ii_')->toHaveLength(27)->toBeString();
+});
+
+it('generates a billing invoice line item id', function () {
+    expect($this->fake->stripeBillingInvoiceLineItemId())->toStartWith('il_tmp_')->toHaveLength(31)->toBeString();
+});
+
+it('generates a billing invoice payment id', function () {
+    expect($this->fake->stripeBillingInvoicePaymentId())->toStartWith('inpay_')->toHaveLength(30)->toBeString();
+});
+
+it('generates a invoice rendering template id', function () {
+    expect($this->fake->stripeBillingInvoiceRenderingTemplateId())->toStartWith('inrtem_')->toHaveLength(31)->toBeString();
+});
+
+it('generates a billing alert id', function () {
+    expect($this->fake->stripeBillingAlertId())->toStartWith('alrt_')->toHaveLength(10)->toBeString();
+});
+
+it('generates a billing meter id', function () {
+    expect($this->fake->stripeBillingMeterId())->toStartWith('mtr_')->toHaveLength(9)->toBeString();
+});
+
+it('generates a billing meter event adjustment id', function () {
+    expect($this->fake->stripeBillingMeterAdjustmentId())->toStartWith('mtr_event_adj_')->toHaveLength(22)->toBeString();
+});
+
+it('generates a billing meter event summary id', function () {
+    expect($this->fake->stripeBillingMeterEventSummaryId())->toStartWith('mtrusg_')->toHaveLength(192)->toBeString();
+});
+
+it('generates a credit grant id', function () {
+    expect($this->fake->stripeBillingCreditGrantId())->toStartWith('credgr_')->toHaveLength(31)->toBeString();
+});
+
+it('generates a billing customer balance transaction id', function () {
+    expect($this->fake->stripeBillingCustomerBalanceTransactionId())->toStartWith('cbtxn_')->toHaveLength(30)->toBeString();
 });
 
 it('generates a billing plan id', function () {
@@ -164,16 +256,40 @@ it('generates a billing subscription schedule id', function () {
     expect($this->fake->stripeBillingSubscriptionScheduleId())->toStartWith('sub_sched_')->toHaveLength(34)->toBeString();
 });
 
+it('generates a billing customer tax id id', function () {
+    expect($this->fake->stripeBillingCustomerTaxIdId())->toStartWith('txi_')->toHaveLength(28)->toBeString();
+});
+
 it('generates a billing test clock id', function () {
     expect($this->fake->stripeBillingTestClockId())->toStartWith('clock_')->toHaveLength(30)->toBeString();
+});
+
+it('generates a financing offer id', function () {
+    expect($this->fake->stripeFinancingOfferId())->toStartWith('financingoffer_')->toHaveLength(39)->toBeString();
+});
+
+it('generates a connect account id', function () {
+    expect($this->fake->stripeConnectAccountId())->toStartWith('acct_')->toHaveLength(21)->toBeString();
+});
+
+it('generates a connect application fee id', function () {
+    expect($this->fake->stripeConnectApplicationFeeId())->toStartWith('fee_')->toHaveLength(28)->toBeString();
 });
 
 it('generates a connect application fee refund id', function () {
     expect($this->fake->stripeConnectApplicationFeeRefundId())->toStartWith('fr_')->toHaveLength(27)->toBeString();
 });
 
+it('generates a connect capability id', function () {
+    expect($this->fake->stripeConnectCapabilityId())->toStartWith('acap_')->toHaveLength(29)->toBeString();
+});
+
 it('generates a connect external account id', function () {
     expect($this->fake->stripeConnectExternalAccountId())->toStartWith('ba_')->toHaveLength(27)->toBeString();
+});
+
+it('generates an external account card id', function () {
+    expect($this->fake->stripeExternalAccountCardId())->toStartWith('card_')->toHaveLength(29)->toBeString();
 });
 
 it('generates a connect person id', function () {
@@ -226,6 +342,18 @@ it('generates an issuing card id', function () {
 
 it('generates an issuing dispute id', function () {
     expect($this->fake->stripeIssuingDisputeId())->toStartWith('idp_')->toHaveLength(28)->toBeString();
+});
+
+it('generates an issuing personalization design id', function () {
+    expect($this->fake->stripeIssuingPersonalizationDesignsId())->toStartWith('ipcd_')->toHaveLength(19)->toBeString();
+});
+
+it('generates an issuing physical bundles id', function () {
+    expect($this->fake->stripeIssuingPhysicalBundlesId())->toStartWith('ics_')->toHaveLength(18)->toBeString();
+});
+
+it('generates a issuing token id', function () {
+    expect($this->fake->stripeIssuingTokenId())->toStartWith('intok_')->toHaveLength(30)->toBeString();
 });
 
 it('generates an issuing transaction id', function () {
@@ -300,8 +428,24 @@ it('generates a treasury debit reversal id', function () {
     expect($this->fake->stripeTreasuryDebitReversalId())->toStartWith('debrev_')->toHaveLength(31)->toBeString();
 });
 
+it('generates an entitlement feature id', function () {
+    expect($this->fake->stripeEntitlementFeatureId())->toStartWith('feat_')->toHaveLength(37)->toBeString();
+});
+
+it('generates an entitlement product feature id', function () {
+    expect($this->fake->stripeEntitlementProductFeatureId())->toStartWith('prodft_')->toHaveLength(21)->toBeString();
+});
+
+it('generates an entitlement active entitlement id', function () {
+    expect($this->fake->stripeEntitlementActiveEntitlementId())->toStartWith('ent_')->toHaveLength(36)->toBeString();
+});
+
 it('generates a scheduled query run id', function () {
     expect($this->fake->stripeSigmaScheduledQueryRunId())->toStartWith('sqr_')->toHaveLength(28)->toBeString();
+});
+
+it('generates a sigma query id', function () {
+    expect($this->fake->stripeSigmaQueryId())->toStartWith('qry_')->toHaveLength(28)->toBeString();
 });
 
 it('generates a reporting report run id', function () {
@@ -324,12 +468,24 @@ it('generates a financial connection transaction id', function () {
     expect($this->fake->stripeFinancialConnectionTransactionId())->toStartWith('fctxn_')->toHaveLength(30)->toBeString();
 });
 
+it('generates a financial connection transaction refresh id', function () {
+    expect($this->fake->stripeFinancialConnectionTransactionRefreshId())->toStartWith('fctxnref_')->toHaveLength(33)->toBeString();
+});
+
 it('generates a tax calculation id', function () {
     expect($this->fake->stripeTaxCalculationId())->toStartWith('taxcalc_')->toHaveLength(32)->toBeString();
 });
 
+it('generates a tax registration id', function () {
+    expect($this->fake->stripeTaxRegistrationId())->toStartWith('taxreg_')->toHaveLength(21)->toBeString();
+});
+
 it('generates a tax transaction id', function () {
     expect($this->fake->stripeTaxTransactionId())->toStartWith('tax_')->toHaveLength(28)->toBeString();
+});
+
+it('generates a tax transaction line item id', function () {
+    expect($this->fake->stripeTaxTransactionLineItemId())->toStartWith('tax_li_')->toHaveLength(21)->toBeString();
 });
 
 it('generates a identity verification session id', function () {
@@ -340,124 +496,12 @@ it('generates a identity verification report id', function () {
     expect($this->fake->stripeIdentityVerificationReportId())->toStartWith('vr_')->toHaveLength(27)->toBeString();
 });
 
-it('generates a webhook endpoint id', function () {
-    expect($this->fake->stripeWebhookEndpointId())->toStartWith('we_')->toHaveLength(27)->toBeString();
-});
-
-it('generates a financial connection transaction refresh id', function () {
-    expect($this->fake->stripeFinancialConnectionTransactionRefreshId())->toStartWith('fctxnref_')->toHaveLength(33)->toBeString();
-});
-
-it('generates a tax transaction line item id', function () {
-    expect($this->fake->stripeTaxTransactionLineItemId())->toStartWith('tax_li_')->toHaveLength(21)->toBeString();
-});
-
-it('generates a webhook application id', function () {
-    expect($this->fake->stripeWebhookApplicationId())->toStartWith('ca_')->toHaveLength(35)->toBeString();
-});
-
 it('generates a crypto onramp session id', function () {
     expect($this->fake->stripeCryptoOnrampSessionId())->toStartWith('cos_')->toHaveLength(28)->toBeString();
 });
 
-it('generates a payment intent client secret', function () {
-    expect($this->fake->stripeCorePaymentIntentClientSecret())->toStartWith('pi_')->toContain('_secret_')->toHaveLength(60)->toBeString();
-});
-
 it('generates a crypto onramp session client secret', function () {
     expect($this->fake->stripeCryptoOnrampSessionClientSecret())->toStartWith('cos_')->toContain('_secret_')->toHaveLength(71)->toBeString();
-});
-
-it('generates a connect capability id', function () {
-    expect($this->fake->stripeConnectCapabilityId())->toStartWith('acap_')->toHaveLength(29)->toBeString();
-});
-
-it('generates a cash balance transaction id', function () {
-    expect($this->fake->stripeCashBalanceTransactionId())->toStartWith('ccsbtxn_')->toHaveLength(32)->toBeString();
-});
-
-it('generates a issuing token id', function () {
-    expect($this->fake->stripeIssuingTokenId())->toStartWith('intok_')->toHaveLength(30)->toBeString();
-});
-
-it('generates a payment method configuration id', function () {
-    expect($this->fake->stripePaymentMethodConfigurationId())->toStartWith('pmc_')->toHaveLength(28)->toBeString();
-});
-
-it('generates a payment method domain id', function () {
-    expect($this->fake->stripePaymentMethodDomainId())->toStartWith('pmd_')->toHaveLength(28)->toBeString();
-});
-
-it('generates a setup intent client secret', function () {
-    expect($this->fake->stripeCoreSetupIntentClientSecret())->toStartWith('seti_')->toHaveLength(68)->toBeString();
-});
-
-it('generates a core bank account token id', function () {
-    expect($this->fake->stripeCoreBankAccountTokenId())->toStartWith('btok_')->toHaveLength(29)->toBeString();
-});
-
-it('generates a core pii token id', function () {
-    expect($this->fake->stripeCorePersonallyIdentifiableInformationTokenId())->toStartWith('pii_')->toHaveLength(28)->toBeString();
-});
-
-it('generates a core account token id', function () {
-    expect($this->fake->stripeCoreAccountTokenId())->toStartWith('ct_')->toHaveLength(27)->toBeString();
-});
-
-it('generates a core person token id', function () {
-    expect($this->fake->stripeCorePersonTokenId())->toStartWith('cpt_')->toHaveLength(28)->toBeString();
-});
-
-it('generates a core cvc token id', function () {
-    expect($this->fake->stripeCoreCvcUpdateTokenId())->toStartWith('cvctok_')->toHaveLength(31)->toBeString();
-});
-
-it('generates a billing credit note line item id', function () {
-    expect($this->fake->stripeBillingCreditNoteLineItemId())->toStartWith('il_')->toHaveLength(27)->toBeString();
-});
-
-it('generates a billing customer portal configuration id', function () {
-    expect($this->fake->stripeBillingCustomerPortalConfigurationId())->toStartWith('bpc_')->toHaveLength(28)->toBeString();
-});
-
-it('generates a confirmation token id', function () {
-    expect($this->fake->stripeCoreConfirmationTokenId())->toStartWith('ctoken_')->toHaveLength(31)->toBeString();
-});
-
-it('generates a billing invoice line item id', function () {
-    expect($this->fake->stripeBillingInvoiceLineItemId())->toStartWith('il_tmp_')->toHaveLength(31)->toBeString();
-});
-
-it('generates a billing alert id', function () {
-    expect($this->fake->stripeBillingAlertId())->toStartWith('alrt_')->toHaveLength(10)->toBeString();
-});
-
-it('generates a billing meter id', function () {
-    expect($this->fake->stripeBillingMeterId())->toStartWith('mtr_')->toHaveLength(9)->toBeString();
-});
-
-it('generates a billing meter event summary id', function () {
-    expect($this->fake->stripeBillingMeterEventSummaryId())->toStartWith('mtrusg_')->toHaveLength(192)->toBeString();
-});
-
-it('generates an issuing personalization design id', function () {
-    expect($this->fake->stripeIssuingPersonalizationDesignsId())->toStartWith('ipcd_')->toHaveLength(19)->toBeString();
-});
-
-it('generates an issuing physical bundles id', function () {
-    expect($this->fake->stripeIssuingPhysicalBundlesId())->toStartWith('ics_')->toHaveLength(18)->toBeString();
-});
-
-it('generates an entitlement feature id', function () {
-    expect($this->fake->stripeEntitlementFeatureId())->toStartWith('feat_')->toHaveLength(37)->toBeString();
-});
-
-it('generates an entitlement product feature id', function () {
-    expect($this->fake->stripeEntitlementProductFeatureId())->toStartWith('prodft_')->toHaveLength(21)->toBeString();
-});
-
-it('generates an entitlement active entitlement id', function () {
-    expect($this->fake->stripeEntitlementActiveEntitlementId())->toStartWith('ent_')->toHaveLength(36)->toBeString();
 });
 
 it('generates a climate order id', function () {
@@ -476,42 +520,6 @@ it('generates a forwarding request id', function () {
     expect($this->fake->stripeForwardingRequestId())->toStartWith('fwd_req_')->toHaveLength(13)->toBeString();
 });
 
-it('generates a credit grant id', function () {
-    expect($this->fake->stripeBillingCreditGrantId())->toStartWith('credgr_')->toHaveLength(31)->toBeString();
-});
-
-it('generates an event destination id', function () {
-    expect($this->fake->stripeCoreEventDestinationId())->toStartWith('ed_')->toHaveLength(27)->toBeString();
-});
-
-it('generates a source id', function () {
-    expect($this->fake->stripeBillingSourceId())->toStartWith('src_')->toHaveLength(28)->toBeString();
-});
-
-it('generates a invoice rendering template id', function () {
-    expect($this->fake->stripeBillingInvoiceRenderingTemplateId())->toStartWith('inrtem_')->toHaveLength(31)->toBeString();
-});
-
-it('generates a credit balance transaction id', function () {
-    expect($this->fake->stripeBillingCreditBalanceTransactionId())->toStartWith('cbtxn_')->toHaveLength(30)->toBeString();
-});
-
-it('generates a financing offer id', function () {
-    expect($this->fake->stripeFinancingOfferId())->toStartWith('financingoffer_')->toHaveLength(39)->toBeString();
-});
-
-it('generates a core fx quote id', function () {
-    expect($this->fake->stripeCoreFxQuoteId())->toStartWith('fxq_')->toHaveLength(28)->toBeString();
-});
-
-it('generates a billing meter event adjustment id', function () {
-    expect($this->fake->stripeBillingMeterAdjustmentId())->toStartWith('mtr_event_adj_')->toHaveLength(22)->toBeString();
-});
-
-it('generates a sigma query id', function () {
-    expect($this->fake->stripeSigmaQueryId())->toStartWith('qry_')->toHaveLength(28)->toBeString();
-});
-
 it('generates a privacy redaction job id', function () {
     expect($this->fake->stripePrivacyRedactionJobId())->toStartWith('prj_')->toHaveLength(7)->toBeString();
 });
@@ -520,14 +528,14 @@ it('generates a privacy redaction job validation error id', function () {
     expect($this->fake->stripePrivacyRedactionJobValidationErrorId())->toStartWith('prjve_')->toHaveLength(9)->toBeString();
 });
 
-it('generates a billing invoice payment id', function () {
-    expect($this->fake->stripeBillingInvoicePaymentId())->toStartWith('inpay_')->toHaveLength(30)->toBeString();
+it('generates a webhook endpoint id', function () {
+    expect($this->fake->stripeWebhookEndpointId())->toStartWith('we_')->toHaveLength(27)->toBeString();
 });
 
-it('generates an external account card id', function () {
-    expect($this->fake->stripeExternalAccountCardId())->toStartWith('card_')->toHaveLength(29)->toBeString();
+it('generates a webhook application id', function () {
+    expect($this->fake->stripeWebhookApplicationId())->toStartWith('ca_')->toHaveLength(35)->toBeString();
 });
 
-it('generates a tax registration id', function () {
-    expect($this->fake->stripeTaxRegistrationId())->toStartWith('taxreg_')->toHaveLength(21)->toBeString();
+it('generates a legacy source id', function () {
+    expect($this->fake->stripeBillingSourceId())->toStartWith('src_')->toHaveLength(28)->toBeString();
 });

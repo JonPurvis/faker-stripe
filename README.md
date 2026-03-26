@@ -32,7 +32,7 @@ the names of resources _should_ match what's in this package.
 | [Event Destinations](https://docs.stripe.com/api/v2/core/event_destinations)   | `stripeCoreEventDestinationId()`                       | `ed_d1RhD6TdVjw78ZxrnkOt62mFS`                                            |
 | [Files](https://stripe.com/docs/api/files)                                     | `stripeCoreFileId()`                                   | `file_qrbRTo7XbytwvE6w3SQU8QXK`                                           |
 | [File Links](https://stripe.com/docs/api/file_links)                           | `stripeCoreFileLinkId()`                               | `link_Z5Tesn6zQYYdov5R3bCblM8A`                                           | 
-| [FX Quotes](https://docs.stripe.com/api/fx_quotes)                             | `stripeFxQuoteId()`                                    | `fxq_An1iMLYse0YRmS43Ls2ZNCdd`                                            | 
+| [FX Quotes](https://docs.stripe.com/api/fx_quotes)                             | `stripeCoreFxQuoteId()`                                | `fxq_An1iMLYse0YRmS43Ls2ZNCdd`                                            | 
 | [Mandates](https://stripe.com/docs/api/mandates)                               | `stripeCoreMandateId()`                                | `mandate_S4EbkGH8MFAOWUXivQqcV7wx`                                        |
 | [PaymentIntents](https://stripe.com/docs/api/payment_intents)                  | `stripeCorePaymentIntentId()`                          | `pi_KiAjc3WFzvswIhq8IkCLXNBW`                                             |
 | [PaymentIntents](https://stripe.com/docs/api/payment_intents)                  | `stripeCorePaymentIntentClientSecret()`                | `pi_rZh1PKbBkmMFkHve9GKRKyg4_secret_dr3lRVfoKD8ew3BUmYZYuVONV`            |
@@ -41,6 +41,8 @@ the names of resources _should_ match what's in this package.
 | [SetupAttempts](https://stripe.com/docs/api/setup_attempts)                    | `stripeCoreSetupAttemptId()`                           | `setatt_JBHfYghz8HiScAnOcOKin75X`                                         |
 | [Payouts](https://stripe.com/docs/api/payouts)                                 | `stripeCorePayoutId()`                                 | `po_YqFWOxztWRuLCJezThbHktTP`                                             |
 | [Refunds](https://stripe.com/docs/api/refunds)                                 | `stripeCoreRefundId()`                                 | `re_3BebPOs89OAgEtXAOG0c1eF4`                                             |
+| [Payment Records](https://docs.stripe.com/api/payment-record)                  | `stripeCorePaymentRecordId()`                          | `pr_5RV730PrHyAEi`                                                        |
+| [Payment Attempt Records](https://docs.stripe.com/api/payment-attempt-record)   | `stripeCorePaymentAttemptRecordId()`                   | `par_4sdDKj23235s`                                                        |
 | [Confirmation Tokens](https://docs.stripe.com/api/confirmation_tokens)         | `stripeCoreConfirmationTokenId()`                      | `ctoken_UDlKXzYnsCqEJvomcWWqCnTF`                                         |
 | [Account Tokens](https://stripe.com/docs/api/tokens/create_account)            | `stripeCoreAccountTokenId()`                           | `ct_XPKqNZwOTjWJatx4A5zW2Myh`                                             |
 | [Bank Account Tokens](https://stripe.com/docs/api/tokens/create_bank_account)  | `stripeCoreBankAccountTokenId()`                       | `btok_8RnxS6Y358qBuRRYS4el8LEo`                                           |
@@ -92,7 +94,7 @@ the names of resources _should_ match what's in this package.
 | [Invoice Items](https://stripe.com/docs/api/invoiceitems)                                     | `stripeBillingInvoiceItemId()`                  | `ii_gOWpZpoGoMOE5IYVS86mmGXS`                                                                                                                                                                      |
 | [Invoice Line Item](https://docs.stripe.com/api/invoice-line_item)                            | `stripeBillingInvoiceLineItemId()`              | `il_tmp_lZHqliBZKLzgXuBajqYaAhxz`                                                                                                                                                                  |
 | [Invoice Payment](https://docs.stripe.com/api/invoice-payment)                                | `stripeBillingInvoicePaymentId()`               | `inpay_uUOgHHV0V88gjsZz4kh1at5D`                                                                                                                                                                   |
-| [Invoice Rendering Template](https://docs.stripe.com/api/invoice-rendering-template)          | `stripeBillingInvoiceLineItemId()`              | `inrtem_lZHqlidX3uB6aFqtYeafAhxz`                                                                                                                                                                  |
+| [Invoice Rendering Template](https://docs.stripe.com/api/invoice-rendering-template)          | `stripeBillingInvoiceRenderingTemplateId()`     | `inrtem_lZHqlidX3uB6aFqtYeafAhxz`                                                                                                                                                                  |
 | [Alerts](https://docs.stripe.com/api/billing/alert)                                           | `stripeBillingAlertId()`                        | `alrt_39061`                                                                                                                                                                                       |
 | [Meters](https://docs.stripe.com/api/billing/meter)                                           | `stripeBillingMeterId()`                        | `mtr_53464`                                                                                                                                                                                        |
 | [Meter Event Adjustment](https://docs.stripe.com/api/billing/meter-event-adjustment)          | `stripeBillingMeterAdjustmentId()`              | `mtr_event_adj_68238901`                                                                                                                                                                           |
@@ -242,6 +244,16 @@ the names of resources _should_ match what's in this package.
 |----------------------------------------------------------------------|--------------------------------|---------------------------------------|
 | [Webhook Endpoints](https://stripe.com/docs/api/webhook_endpoints)   | `stripeWebhookEndpointId()`    | `we_irKQp8JwXgUxXFefCM6zlx1R`         |
 | [Webhook Application](https://stripe.com/docs/api/webhook_endpoints) | `stripeWebhookApplicationId()` | `ca_Y5nYE1wwup9JPcXxQ9JaJWBRAJiFMujp` |
+
+### Legacy resources
+
+Stripe still documents some older APIs that are not recommended for new integrations. This package may still generate IDs for tests against existing data.
+
+| API Resource | Method | Notes |
+|:-------------|--------|-------|
+| [Sources](https://stripe.com/docs/api/sources) | `stripeBillingSourceId()` | Legacy payment source API; prefer [Payment Methods](https://stripe.com/docs/api/payment_methods). |
+
+Resources such as [Account Link](https://stripe.com/docs/api/account_links) and [Customer Session](https://docs.stripe.com/api/customer_sessions) do not expose a persistent `id` in the API (only URLs or `client_secret`), so they are not included as ID generators here.
 
 ## 📚 Usage / Examples
 ### Pest

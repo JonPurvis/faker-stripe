@@ -16,8 +16,8 @@
         "fakerphp/faker": "^1.23"
     },
     "require-dev": {
-        "pestphp/pest": "^v3.8.2",
-        "pestphp/pest-plugin-faker": "^v3.0.0"
+        "pestphp/pest": "^v4.0",
+        "pestphp/pest-plugin-faker": "^v4.0"
     },
     "autoload": {
         "psr-4": {

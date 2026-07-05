@@ -50,6 +50,9 @@ the names of resources _should_ match what's in this package.
 | [CVC Update Tokens](https://stripe.com/docs/api/tokens/create_cvc_update)      | `stripeCoreCvcUpdateTokenId()`                         | `cvctok_wWV1bniJ16gsBjJlIMrN8T87`                                         |
 | [Person Tokens](https://stripe.com/docs/api/tokens/create_person)              | `stripeCorePersonTokenId()`                            | `cpt_MtqTlVzM2qmAIv0KhZJ0qV4g`                                            |
 | [PII Tokens](https://stripe.com/docs/api/tokens/create_pii)                    | `stripeCorePersonallyIdentifiableInformationTokenId()` | `pii_uCbQpWwZu3tJEUm18GiQsKAa`                                            |
+| [Batch Jobs](https://docs.stripe.com/api/v2/core/batch-jobs/object?api-version=2026-04-22.preview) | `stripeCoreBatchJobId()`                               | `batchv2_AbCdEfGhIjKlMnOpQrStUvWxYz`                                        |
+| [Workflows](https://docs.stripe.com/api/v2/core/workflows/object?api-version=2026-03-25.preview)   | `stripeCoreWorkflowId()`                               | `wf_dwqXjY61dhXHyp0NGLbrhymx`                                               |
+| [Workflow Runs](https://docs.stripe.com/workflows/programmatic-triggers)       | `stripeCoreWorkflowRunId()`                            | `wfrun_dwqXjY61dhXHyp0NGLbrhymx`                                            |
 
 ### Payment Methods
 | API Resource                                                                               | Method                                              | Example                                             |
@@ -71,6 +74,7 @@ the names of resources _should_ match what's in this package.
 | [Tax Codes](https://stripe.com/docs/api/tax_codes)                      | `stripeProductTaxCodeId()`       | `txcd_90766505`                  |
 | [Tax Rates](https://stripe.com/docs/api/tax_rates)                      | `stripeProductTaxRateId()`       | `txr_nNePe3bTkOwlrAbsAxpXzWXy`   |
 | [Shipping Rates](https://stripe.com/docs/api/shipping_rates)            | `stripeProductShippingRateId()`  | `shr_Sg2ZpoUCsfdAujoCc8U8MDba`   |
+| [Trial Offers](https://docs.stripe.com/api/product-catalog/trial-offer/object?api-version=2026-03-25.preview) | `stripeProductTrialOfferId()` | `to_1Hh5Xx2eZvKYlo2C8JaUOv4R` |
 
 ### Checkout
 | API Resource                                                       | Method                      | Example                                                         |
@@ -81,6 +85,12 @@ the names of resources _should_ match what's in this package.
 | API Resource                                                            | Method                  | Example                          |
 |-------------------------------------------------------------------------|-------------------------|----------------------------------|
 | [Payment Link](https://stripe.com/docs/api/payment_links/payment_links) | `stripePaymentLinkId()` | `plink_L85n1vZMv4QS0aYwj11TKjTy` |
+
+### Shared Payment
+| API Resource                                                                               | Method                                   | Example                          |
+|:-------------------------------------------------------------------------------------------|------------------------------------------|----------------------------------|
+| [Shared Payment Issued Token](https://docs.stripe.com/api/shared-payment/issued-token/object) | `stripeSharedPaymentIssuedTokenId()`  | `spt_1RgaZcFPC5QUO6ZCDVZuVA8q`   |
+| [Shared Payment Granted Token](https://docs.stripe.com/api/shared-payment/granted-token/object) | `stripeSharedPaymentGrantedTokenId()` | `spt_1RgaZcFPC5QUO6ZCDVZuVA8q`   |
 
 ### Billing
 | API Resource                                                                                  | Method                                          | Example                                                                                                                                                                                            |
@@ -174,6 +184,12 @@ the names of resources _should_ match what's in this package.
 | [CreditReversals](https://stripe.com/docs/api/treasury/credit_reversals)       | `stripeTreasuryCreditReversalId()`   | `credrev_awpfYT4hppBEmsz9KPgtOYDm` |
 | [DebitReversals](https://stripe.com/docs/api/treasury/debit_reversals)         | `stripeTreasuryDebitReversalId()`    | `debrev_ykpt4Mi6yZAPrm8upq3yKI5r`  |
 
+### Money Management
+| API Resource                                                                                                      | Method                                          | Example                                                          |
+|:------------------------------------------------------------------------------------------------------------------|-------------------------------------------------|------------------------------------------------------------------|
+| [Financial Addresses](https://docs.stripe.com/api/v2/money-management/financial-addresses/object?api-version=2026-04-22.preview) | `stripeMoneyManagementFinancialAddressId()` | `finaddr_61O6nHqDsFuMtECYR16O0lef0dSQgZ0EhGyZsQCXQMls`           |
+| [Adjustments](https://docs.stripe.com/api/v2/money-management/adjustments/object?api-version=2026-04-22.preview)   | `stripeMoneyManagementAdjustmentId()`           | `adj_65Pj770ytFhPwgkQg0116Pj6mS0dSQaN2JL1S0NhRweDjE`            |
+
 ### Entitlements
 | API Resource                                                                      | Method                                    | Example                                  |
 |-----------------------------------------------------------------------------------|-------------------------------------------|------------------------------------------|
@@ -238,6 +254,11 @@ the names of resources _should_ match what's in this package.
 |------------------------------------------------------------------------------------------------------|------------------------------------------------|----------------|
 | [Redaction Job](https://docs.stripe.com/api/privacy/redaction-job)                                   | `stripePrivacyRedactionJobId()`                | `prj_167`      |
 | [Redaction Job Validation Error](https://docs.stripe.com/api/privacy/redaction-job-validation-error) | `stripePrivacyRedactionJobValidationErrorId()` | `prjve_166`    |
+
+### IAM
+| API Resource                                                                                  | Method                      | Example                          |
+|:----------------------------------------------------------------------------------------------|-----------------------------|----------------------------------|
+| [Activity Logs](https://docs.stripe.com/api/v2/iam/activity-logs/object?api-version=2026-04-22.preview) | `stripeIamActivityLogId()` | `accact_1SdeybAiQNL8swvtMHyVtfCU` |
 
 ### Webhooks
 | API Resource                                                         | Method                         | Example                               |

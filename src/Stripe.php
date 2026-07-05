@@ -152,6 +152,21 @@ class Stripe extends Base
         return 'pii_' . $this->generateRandomString();
     }
 
+    public function stripeCoreBatchJobId(): string
+    {
+        return 'batchv2_' . $this->generateRandomString(length: 26);
+    }
+
+    public function stripeCoreWorkflowId(): string
+    {
+        return 'wf_' . $this->generateRandomString();
+    }
+
+    public function stripeCoreWorkflowRunId(): string
+    {
+        return 'wfrun_' . $this->generateRandomString();
+    }
+
     public function stripePaymentMethodId(): string
     {
         return 'pm_' . $this->generateRandomString();
@@ -217,6 +232,11 @@ class Stripe extends Base
         return 'shr_' . $this->generateRandomString();
     }
 
+    public function stripeProductTrialOfferId(): string
+    {
+        return 'to_' . $this->generateRandomString();
+    }
+
     public function stripeCheckoutSessionId(): string
     {
         return 'cs_' . $this->generateRandomString(length: 58);
@@ -225,6 +245,16 @@ class Stripe extends Base
     public function stripePaymentLinkId(): string
     {
         return 'plink_' . $this->generateRandomString();
+    }
+
+    public function stripeSharedPaymentIssuedTokenId(): string
+    {
+        return 'spt_' . $this->generateRandomString();
+    }
+
+    public function stripeSharedPaymentGrantedTokenId(): string
+    {
+        return 'spt_' . $this->generateRandomString();
     }
 
     public function stripeBillingCreditNoteId(): string
@@ -547,6 +577,16 @@ class Stripe extends Base
         return 'debrev_' . $this->generateRandomString();
     }
 
+    public function stripeMoneyManagementFinancialAddressId(): string
+    {
+        return 'finaddr_' . $this->generateRandomString(length: 44);
+    }
+
+    public function stripeMoneyManagementAdjustmentId(): string
+    {
+        return 'adj_' . $this->generateRandomString(length: 46);
+    }
+
     public function stripeEntitlementFeatureId(): string
     {
         return 'feat_' . $this->generateRandomString(length: 32);
@@ -670,6 +710,11 @@ class Stripe extends Base
     public function stripePrivacyRedactionJobValidationErrorId(): string
     {
         return 'prjve_' . $this->generateRandomString(3, true);
+    }
+
+    public function stripeIamActivityLogId(): string
+    {
+        return 'accact_' . $this->generateRandomString();
     }
 
     public function stripeWebhookEndpointId(): string

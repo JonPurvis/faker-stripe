@@ -112,6 +112,18 @@ it('generates a core pii token id', function () {
     expect($this->fake->stripeCorePersonallyIdentifiableInformationTokenId())->toStartWith('pii_')->toHaveLength(28)->toBeString();
 });
 
+it('generates a core batch job id', function () {
+    expect($this->fake->stripeCoreBatchJobId())->toStartWith('batchv2_')->toHaveLength(34)->toBeString();
+});
+
+it('generates a core workflow id', function () {
+    expect($this->fake->stripeCoreWorkflowId())->toStartWith('wf_')->toHaveLength(27)->toBeString();
+});
+
+it('generates a core workflow run id', function () {
+    expect($this->fake->stripeCoreWorkflowRunId())->toStartWith('wfrun_')->toHaveLength(30)->toBeString();
+});
+
 it('generates a payment method id', function () {
     expect($this->fake->stripePaymentMethodId())->toStartWith('pm_')->toHaveLength(27)->toBeString();
 });
@@ -164,12 +176,24 @@ it('generates a product shipping rate id', function () {
     expect($this->fake->stripeProductShippingRateId())->toStartWith('shr_')->toHaveLength(28)->toBeString();
 });
 
+it('generates a product trial offer id', function () {
+    expect($this->fake->stripeProductTrialOfferId())->toStartWith('to_')->toHaveLength(27)->toBeString();
+});
+
 it('generates a checkout session id', function () {
     expect($this->fake->stripeCheckoutSessionId())->toStartWith('cs_')->toHaveLength(61)->toBeString();
 });
 
 it('generates a payment link id', function () {
     expect($this->fake->stripePaymentLinkId())->toStartWith('plink_')->toHaveLength(30)->toBeString();
+});
+
+it('generates a shared payment issued token id', function () {
+    expect($this->fake->stripeSharedPaymentIssuedTokenId())->toStartWith('spt_')->toHaveLength(28)->toBeString();
+});
+
+it('generates a shared payment granted token id', function () {
+    expect($this->fake->stripeSharedPaymentGrantedTokenId())->toStartWith('spt_')->toHaveLength(28)->toBeString();
 });
 
 it('generates a billing credit note id', function () {
@@ -428,6 +452,14 @@ it('generates a treasury debit reversal id', function () {
     expect($this->fake->stripeTreasuryDebitReversalId())->toStartWith('debrev_')->toHaveLength(31)->toBeString();
 });
 
+it('generates a money management financial address id', function () {
+    expect($this->fake->stripeMoneyManagementFinancialAddressId())->toStartWith('finaddr_')->toHaveLength(52)->toBeString();
+});
+
+it('generates a money management adjustment id', function () {
+    expect($this->fake->stripeMoneyManagementAdjustmentId())->toStartWith('adj_')->toHaveLength(50)->toBeString();
+});
+
 it('generates an entitlement feature id', function () {
     expect($this->fake->stripeEntitlementFeatureId())->toStartWith('feat_')->toHaveLength(37)->toBeString();
 });
@@ -526,6 +558,10 @@ it('generates a privacy redaction job id', function () {
 
 it('generates a privacy redaction job validation error id', function () {
     expect($this->fake->stripePrivacyRedactionJobValidationErrorId())->toStartWith('prjve_')->toHaveLength(9)->toBeString();
+});
+
+it('generates an iam activity log id', function () {
+    expect($this->fake->stripeIamActivityLogId())->toStartWith('accact_')->toHaveLength(31)->toBeString();
 });
 
 it('generates a webhook endpoint id', function () {

@@ -12,7 +12,7 @@
 ## 👋 Introduction
 This package allows FakerPHP to generate fake IDs which have the same structure you can expect to be returned from 
 Stripe. The wonderful [Pest](https://pestphp.com/) is used to run tests contained within this package, which requires
-a minimum PHP Version of 8.2. 
+a minimum PHP Version of 8.3. 
 
 This package is listed on the [official FakerPHP website](https://fakerphp.org/third-party/) as a third party library.
 

@@ -1,6 +1,7 @@
 <?php
 
 use Faker\Provider\Stripe;
+
 use function Pest\Faker\fake;
 
 beforeEach(function () {

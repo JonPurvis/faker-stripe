@@ -17,7 +17,9 @@
     },
     "require-dev": {
         "pestphp/pest": "^v4.0",
-        "pestphp/pest-plugin-faker": "^v4.0"
+        "pestphp/pest-plugin-faker": "^v4.0",
+        "phpstan/phpstan": "^2.2",
+        "laravel/pint": "^1.30"
     },
     "autoload": {
         "psr-4": {
@@ -33,5 +35,11 @@
         "allow-plugins": {
             "pestphp/pest-plugin": true
         }
+    },
+    "scripts": {
+        "test": "pest",
+        "phpstan": "phpstan analyse",
+        "pint": "pint",
+        "pint:test": "pint --test"
     }
 }

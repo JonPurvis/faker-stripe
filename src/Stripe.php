@@ -4,7 +4,7 @@ namespace Faker\Provider;
 
 class Stripe extends Base
 {
-    private function generateRandomString($length = 24, $numericOnly = false): string
+    private function generateRandomString(int $length = 24, bool $numericOnly = false): string
     {
         if ($numericOnly) {
             $characters = '0123456789';

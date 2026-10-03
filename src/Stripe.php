@@ -39,7 +39,7 @@ class Stripe extends Base
 
     public function stripeCoreDisputeId(): string
     {
-        return 'dp_' . $this->generateRandomString();
+        return 'du_' . $this->generateRandomString();
     }
 
     public function stripeCoreEventId(): string
@@ -294,7 +294,7 @@ class Stripe extends Base
 
     public function stripeBillingCreditNoteLineItemId(): string
     {
-        return 'il_' . $this->generateRandomString();
+        return 'cnli_' . $this->generateRandomString();
     }
 
     public function stripeBillingCreditBalanceTransactionId(): string
@@ -379,7 +379,7 @@ class Stripe extends Base
 
     public function stripeBillingPlanId(): string
     {
-        return 'price_' . $this->generateRandomString();
+        return 'plan_' . $this->generateRandomString(length: 14);
     }
 
     public function stripeBillingQuoteId(): string
@@ -851,7 +851,7 @@ class Stripe extends Base
 
     public function stripeForwardingRequestId(): string
     {
-        return 'fwd_req_' . $this->generateRandomString(length: 5, numericOnly: true);
+        return 'fwdreq_' . $this->generateRandomString(length: 5, numericOnly: true);
     }
 
     public function stripePrivacyRedactionJobId(): string

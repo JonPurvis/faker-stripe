@@ -22,7 +22,7 @@ it('generates a core customer id', function () {
 });
 
 it('generates a core dispute id', function () {
-    expect($this->fake->stripeCoreDisputeId())->toStartWith('dp_')->toHaveLength(27)->toBeString();
+    expect($this->fake->stripeCoreDisputeId())->toStartWith('du_')->toHaveLength(27)->toBeString();
 });
 
 it('generates a core event id', function () {
@@ -226,7 +226,7 @@ it('generates a billing credit note id', function () {
 });
 
 it('generates a billing credit note line item id', function () {
-    expect($this->fake->stripeBillingCreditNoteLineItemId())->toStartWith('il_')->toHaveLength(27)->toBeString();
+    expect($this->fake->stripeBillingCreditNoteLineItemId())->toStartWith('cnli_')->toHaveLength(29)->toBeString();
 });
 
 it('generates a billing credit balance transaction id', function () {
@@ -294,7 +294,7 @@ it('generates a billing customer balance transaction id', function () {
 });
 
 it('generates a billing plan id', function () {
-    expect($this->fake->stripeBillingPlanId())->toStartWith('price_')->toHaveLength(30)->toBeString();
+    expect($this->fake->stripeBillingPlanId())->toStartWith('plan_')->toHaveLength(19)->toBeString();
 });
 
 it('generates a billing quote id', function () {
@@ -670,7 +670,7 @@ it('generates a climate supplier id', function () {
 });
 
 it('generates a forwarding request id', function () {
-    expect($this->fake->stripeForwardingRequestId())->toStartWith('fwd_req_')->toHaveLength(13)->toBeString();
+    expect($this->fake->stripeForwardingRequestId())->toStartWith('fwdreq_')->toHaveLength(12)->toBeString();
 });
 
 it('generates a privacy redaction job id', function () {

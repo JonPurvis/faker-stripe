@@ -74,7 +74,8 @@ the names of resources _should_ match what's in this package.
 | [Tax Codes](https://stripe.com/docs/api/tax_codes)                      | `stripeProductTaxCodeId()`       | `txcd_90766505`                  |
 | [Tax Rates](https://stripe.com/docs/api/tax_rates)                      | `stripeProductTaxRateId()`       | `txr_nNePe3bTkOwlrAbsAxpXzWXy`   |
 | [Shipping Rates](https://stripe.com/docs/api/shipping_rates)            | `stripeProductShippingRateId()`  | `shr_Sg2ZpoUCsfdAujoCc8U8MDba`   |
-| [Trial Offers](https://docs.stripe.com/api/product-catalog/trial-offer/object?api-version=2026-03-25.preview) | `stripeProductTrialOfferId()` | `to_1Hh5Xx2eZvKYlo2C8JaUOv4R` |
+| [Trial Offers](https://docs.stripe.com/api/product-catalog/trial-offer/object) | `stripeProductTrialOfferId()` | `to_1Hh5Xx2eZvKYlo2C8JaUOv4R` |
+| [Product Catalog Imports](https://docs.stripe.com/api/v2/commerce/product-catalog-imports/object) | `stripeProductCatalogImportId()` | `pcimprt_61O6nHqDsFuMtECYR16O0lef0dSQgZ0EhGyZsQCXQMls` |
 
 ### Checkout
 | API Resource                                                       | Method                      | Example                                                         |
@@ -118,11 +119,19 @@ the names of resources _should_ match what's in this package.
 | [Subscription Schedules](https://stripe.com/docs/api/subscription_schedules)                  | `stripeBillingSubscriptionScheduleId()`         | `sub_sched_OnyC6GSR3kjse08ehVNsB5U0`                                                                                                                                                               |
 | [Tax IDs](https://stripe.com/docs/api/customer_tax_ids)                                       | `stripeBillingCustomerTaxIdId()`                | `txi_Vs7BSOcldH5QIN35U8lSlJuc`                                                                                                                                                                     |
 | [Test Clocks](https://stripe.com/docs/api/test_clocks)                                        | `stripeBillingTestClockId()`                    | `clock_6QR6dCPpUhhBg81wmyFF4VtJ`                                                                                                                                                                   |
+| [Feedback Options](https://docs.stripe.com/api/billing/feedback-option/object)                | `stripeBillingFeedbackOptionId()`               | `fo_Na40ulkbDvvegzALfY8w61ud`                                                                                                                                                                      |
 
 ### Capital
 | API Resource                                                            | Method                       | Example                                        |
 |-------------------------------------------------------------------------|------------------------------|------------------------------------------------|
 | [FinancingOffers](https://docs.stripe.com/api/capital/financing_offers) | `stripeFinancingOfferId()`   | `financingoffer_Y15ngYE41jww8upx9J2PcFXxQWBjp` |
+
+### Reserve
+| API Resource                                                            | Method                       | Example                                        |
+|-------------------------------------------------------------------------|------------------------------|------------------------------------------------|
+| [Reserve Plans](https://docs.stripe.com/api/reserve/plan/object)        | `stripeReservePlanId()`      | `resplan_Y15ngYE41jww8upx9J2PcFXxQWBjp`        |
+| [Reserve Holds](https://docs.stripe.com/api/reserve/hold/object)        | `stripeReserveHoldId()`      | `reshold_Y15ngYE41jww8upx9J2PcFXxQWBjp`        |
+| [Reserve Releases](https://docs.stripe.com/api/reserve/release/object)  | `stripeReserveReleaseId()`   | `resrel_Y15ngYE41jww8upx9J2PcFXxQWBjp`         |
 
 ### Connect
 | API Resource                                                                 | Method                                  | Example                              |
@@ -146,6 +155,7 @@ the names of resources _should_ match what's in this package.
 | [Reviews](https://stripe.com/docs/api/radar/reviews)                          | `stripeFraudReviewId()`            | `prv_Zlx9K6ixTcigHUnOdpxqCjOO`   |
 | [Value Lists](https://stripe.com/docs/api/radar/value_lists)                  | `stripeFraudValueListId()`         | `rsl_C8PVL4lNS75t4PWEscJUXEkm`   |
 | [Value List Items](https://stripe.com/docs/api/radar/value_list_items)        | `stripeFraudValueListItemId()`     | `rsli_QQdPv6uWYm7nZUlX3g65TfGV`  |
+| [Payment Evaluations](https://docs.stripe.com/radar/multiprocessor)           | `stripeFraudPaymentEvaluationId()` | `peval_NDwczkwka50cAHRFVfnbQP30` |
 
 ### Issuing
 | API Resource                                                                           | Method                                    | Example                             |
@@ -189,6 +199,8 @@ the names of resources _should_ match what's in this package.
 |:------------------------------------------------------------------------------------------------------------------|-------------------------------------------------|------------------------------------------------------------------|
 | [Financial Addresses](https://docs.stripe.com/api/v2/money-management/financial-addresses/object?api-version=2026-04-22.preview) | `stripeMoneyManagementFinancialAddressId()` | `finaddr_61O6nHqDsFuMtECYR16O0lef0dSQgZ0EhGyZsQCXQMls`           |
 | [Adjustments](https://docs.stripe.com/api/v2/money-management/adjustments/object?api-version=2026-04-22.preview)   | `stripeMoneyManagementAdjustmentId()`           | `adj_65Pj770ytFhPwgkQg0116Pj6mS0dSQaN2JL1S0NhRweDjE`            |
+| [Outbound Payment Quotes](https://docs.stripe.com/api/v2/money-management/outbound-payment-quotes?api-version=2026-04-22.preview) | `stripeMoneyManagementOutboundPaymentQuoteId()` | `obpq_65Pj770ytFhPwgkQg0116Pj6mS0dSQaN2JL1S0NhRweDjE` |
+| [Outbound Setup Intents](https://docs.stripe.com/api/v2/money-management/outbound-setup-intents/object?api-version=2026-04-22.preview) | `stripeMoneyManagementOutboundSetupIntentId()` | `osi_61O6nHqDsFuMtECYR16O0lef0dSQgZ0EhGyZsQCXQMls` |
 
 ### Entitlements
 | API Resource                                                                      | Method                                    | Example                                  |
@@ -221,6 +233,8 @@ the names of resources _should_ match what's in this package.
 | API Resource                                                                        | Method                             | Example                            |
 |-------------------------------------------------------------------------------------|------------------------------------|------------------------------------|
 | [Tax Calculations](https://stripe.com/docs/api/tax/calculations)                    | `stripeTaxCalculationId()`         | `taxcalc_3tXT5aZ0nMqhD0sFe8VtY8tR` |
+| [Tax Locations](https://docs.stripe.com/api/tax/location/object)                    | `stripeTaxLocationId()`            | `taxloc_3tXT5aZ0nMqhD0sFe8VtY8tR`  |
+| [Tax Associations](https://docs.stripe.com/api/tax/associations/object)             | `stripeTaxAssociationId()`         | `taxa_3tXT5aZ0nMqhD0sFe8VtY8tR`    |
 | [Tax Registrations](https://docs.stripe.com/api/tax/registrations)                  | `stripeTaxRegistrationId()`        | `taxreg_ZEKy4vPjjv9yab`            |
 | [Tax Transactions](https://stripe.com/docs/api/tax/transactions)                    | `stripeTaxTransactionId()`         | `tax_nnTCZZscXpM9xaJyyncMJOck`     |
 | [Transaction Line Items](https://stripe.com/docs/api/tax/transactions/line_items)   | `stripeTaxTransactionLineItemId()` | `tax_li_NSTCDtCYyvp5dT`            |
@@ -259,6 +273,12 @@ the names of resources _should_ match what's in this package.
 | API Resource                                                                                  | Method                      | Example                          |
 |:----------------------------------------------------------------------------------------------|-----------------------------|----------------------------------|
 | [Activity Logs](https://docs.stripe.com/api/v2/iam/activity-logs/object?api-version=2026-04-22.preview) | `stripeIamActivityLogId()` | `accact_1SdeybAiQNL8swvtMHyVtfCU` |
+
+### Apps
+| API Resource                                                                         | Method                      | Example                                          |
+|:-------------------------------------------------------------------------------------|-----------------------------|--------------------------------------------------|
+| [Apps](https://docs.stripe.com/api/apps/installs/object)                             | `stripeAppsAppId()`         | `app_dwqXjY61dhXHyp0NGLbrhymxAbCdEfGh`           |
+| [Installs](https://docs.stripe.com/api/apps/installs/object)                         | `stripeAppsInstallId()`     | `appinst_dwqXjY61dhXHyp0NGLbrhymxAbCdEfGh`       |
 
 ### Webhooks
 | API Resource                                                         | Method                         | Example                               |

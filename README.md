@@ -16,6 +16,8 @@ a minimum PHP Version of 8.3.
 
 This package is listed on the [official FakerPHP website](https://fakerphp.org/third-party/) as a third party library.
 
+When upgrading between major versions, see [UPGRADING.md](UPGRADING.md).
+
 ## ✨Features
 This package can currently generate fake IDs for the following Stripe resources. To avoid any confusion,
 the names of resources _should_ match what's in this package.
@@ -27,7 +29,7 @@ the names of resources _should_ match what's in this package.
 | [Balance Transactions](https://stripe.com/docs/api/balance_transactions)       | `stripeCoreBalanceTransactionId()`                     | `txn_na40ulkbDvvegzALfY8w61udH`                                           |
 | [Charges](https://stripe.com/docs/api/charges)                                 | `stripeCoreChargeId()`                                 | `ch_Dxy18EPyj6XXvqQiqApPQ8dA`                                             |
 | [Customers](https://stripe.com/docs/api/customers)                             | `stripeCoreCustomerId()`                               | `cus_uW8qUwsTwKKtY3`                                                      |
-| [Disputes](https://stripe.com/docs/api/disputes)                               | `stripeCoreDisputeId()`                                | `dp_e3ZeEytdlpOxMtRg9M88RMcq`                                             |
+| [Disputes](https://stripe.com/docs/api/disputes)                               | `stripeCoreDisputeId()`                                | `du_e3ZeEytdlpOxMtRg9M88RMcq`                                             |
 | [Events](https://stripe.com/docs/api/events)                                   | `stripeCoreEventId()`                                  | `evt_diyd59RDTVw8ZxrnkOt62mFS`                                            |
 | [Event Destinations](https://docs.stripe.com/api/v2/core/event_destinations)   | `stripeCoreEventDestinationId()`                       | `ed_d1RhD6TdVjw78ZxrnkOt62mFS`                                            |
 | [Files](https://stripe.com/docs/api/files)                                     | `stripeCoreFileId()`                                   | `file_qrbRTo7XbytwvE6w3SQU8QXK`                                           |
@@ -102,7 +104,7 @@ the names of resources _should_ match what's in this package.
 | API Resource                                                                                  | Method                                          | Example                                                                                                                                                                                            |
 |-----------------------------------------------------------------------------------------------|-------------------------------------------------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | [Credit Note](https://stripe.com/docs/api/credit_notes)                                       | `stripeBillingCreditNoteId()`                   | `cn_37b9KW8lODWCDSilck1hs0on`                                                                                                                                                                      |
-| [Credit Note Line Items](https://stripe.com/docs/api/credit_notes/line_item)                  | `stripeBillingCreditNoteLineItemId()`           | `il_75E91IzYCJaaSbESOZl5GQiF`                                                                                                                                                                      |
+| [Credit Note Line Items](https://stripe.com/docs/api/credit_notes/line_item)                  | `stripeBillingCreditNoteLineItemId()`           | `cnli_75E91IzYCJaaSbESOZl5GQiF`                                                                                                                                                                    |
 | [Credit Balance Transactions](https://stripe.com/docs/api/billing/credit-balance-transaction) | `stripeBillingCreditBalanceTransactionId()`     | `cbtxn_37b3DSyi5lc9uck2sp1hs0on`                                                                                                                                                                   |
 | [Customer Portal Session](https://docs.stripe.com/api/customer_portal/sessions)               | `stripeBillingCustomerPortalId()`               | `bps_HFXl8fnSxXjVUvepP0g7cfEH`                                                                                                                                                                     |
 | [Customer Portal Configuration](https://stripe.com/docs/api/customer_portal/configuration)    | `stripeBillingCustomerPortalConfigurationId()`  | `bpc_sfteIfmkKXSNTxL7nA5dNKVS`                                                                                                                                                                     |
@@ -119,7 +121,7 @@ the names of resources _should_ match what's in this package.
 | [Credit Grants](https://stripe.com/docs/api/billing/credit-grant)                             | `stripeBillingCreditGrantId()`                  | `credgr_37b9KW82CDhSi5lcuk1hs0on`                                                                                                                                                                  |
 | [Credit Grants](https://stripe.com/docs/api/billing/credit-grant)                             | `stripeBillingCreditGrantCrgrId()`              | `crgr_37b9KW82CDhSi5lcuk1hs0on`                                                                                                                                                                    |
 | [Credit Balance Transactions](https://docs.stripe.com/api/billing/credit-balance-transaction) | `stripeBillingCustomerBalanceTransactionId()`   | `cbtxn_SboO9vmMCUoTg6iGGdsOQ18R`                                                                                                                                                                   |
-| [Plans](https://stripe.com/docs/api/plans)                                                    | `stripeBillingPlanId()`                         | `price_9wWZ7dtmQSWvQDhFBJB49sv8`                                                                                                                                                                   |
+| [Plans](https://stripe.com/docs/api/plans)                                                    | `stripeBillingPlanId()`                         | `plan_9wWZ7dtmQSWvQD`                                                                                                                                                                              |
 | [Quote](https://stripe.com/docs/api/quotes)                                                   | `stripeBillingQuoteId()`                        | `qt_qrx3tn3rnQ1USENFK1gJcXLv`                                                                                                                                                                      |
 | [Subscriptions](https://stripe.com/docs/api/subscriptions)                                    | `stripeBillingSubscriptionId()`                 | `sub_wMwsJiaZpdRfrF7WXkP0ibmc`                                                                                                                                                                     |
 | [Subscription Items](https://stripe.com/docs/api/subscription_items)                          | `stripeBillingSubscriptionItemId()`             | `si_3OdBLaD7p37H2A`                                                                                                                                                                                |
@@ -279,7 +281,7 @@ the names of resources _should_ match what's in this package.
 ### Forwarding
 | API Resource                                                         | Method                        | Example          |
 |----------------------------------------------------------------------|-------------------------------|------------------|
-| [Forwarding Request](https://docs.stripe.com/api/forwarding/request) | `stripeForwardingRequestId()` | `fwd_req_90746`  |
+| [Forwarding Request](https://docs.stripe.com/api/forwarding/request) | `stripeForwardingRequestId()` | `fwdreq_90746` |
 
 ### Privacy
 | API Resource                                                                                         | Method                                         | Example        |

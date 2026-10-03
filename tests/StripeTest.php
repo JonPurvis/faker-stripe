@@ -181,6 +181,10 @@ it('generates a product trial offer id', function () {
     expect($this->fake->stripeProductTrialOfferId())->toStartWith('to_')->toHaveLength(27)->toBeString();
 });
 
+it('generates a product catalog import id', function () {
+    expect($this->fake->stripeProductCatalogImportId())->toStartWith('pcimprt_')->toHaveLength(52)->toBeString();
+});
+
 it('generates a checkout session id', function () {
     expect($this->fake->stripeCheckoutSessionId())->toStartWith('cs_')->toHaveLength(61)->toBeString();
 });
@@ -289,8 +293,24 @@ it('generates a billing test clock id', function () {
     expect($this->fake->stripeBillingTestClockId())->toStartWith('clock_')->toHaveLength(30)->toBeString();
 });
 
+it('generates a billing feedback option id', function () {
+    expect($this->fake->stripeBillingFeedbackOptionId())->toStartWith('fo_')->toHaveLength(27)->toBeString();
+});
+
 it('generates a financing offer id', function () {
     expect($this->fake->stripeFinancingOfferId())->toStartWith('financingoffer_')->toHaveLength(39)->toBeString();
+});
+
+it('generates a reserve plan id', function () {
+    expect($this->fake->stripeReservePlanId())->toStartWith('resplan_')->toHaveLength(37)->toBeString();
+});
+
+it('generates a reserve hold id', function () {
+    expect($this->fake->stripeReserveHoldId())->toStartWith('reshold_')->toHaveLength(37)->toBeString();
+});
+
+it('generates a reserve release id', function () {
+    expect($this->fake->stripeReserveReleaseId())->toStartWith('resrel_')->toHaveLength(36)->toBeString();
 });
 
 it('generates a connect account id', function () {
@@ -351,6 +371,10 @@ it('generates a fraud value list id', function () {
 
 it('generates a fraud value list item id', function () {
     expect($this->fake->stripeFraudValueListItemId())->toStartWith('rsli_')->toHaveLength(29)->toBeString();
+});
+
+it('generates a fraud payment evaluation id', function () {
+    expect($this->fake->stripeFraudPaymentEvaluationId())->toStartWith('peval_')->toHaveLength(30)->toBeString();
 });
 
 it('generates an issuing authorization id', function () {
@@ -461,6 +485,14 @@ it('generates a money management adjustment id', function () {
     expect($this->fake->stripeMoneyManagementAdjustmentId())->toStartWith('adj_')->toHaveLength(50)->toBeString();
 });
 
+it('generates a money management outbound payment quote id', function () {
+    expect($this->fake->stripeMoneyManagementOutboundPaymentQuoteId())->toStartWith('obpq_')->toHaveLength(51)->toBeString();
+});
+
+it('generates a money management outbound setup intent id', function () {
+    expect($this->fake->stripeMoneyManagementOutboundSetupIntentId())->toStartWith('osi_')->toHaveLength(48)->toBeString();
+});
+
 it('generates an entitlement feature id', function () {
     expect($this->fake->stripeEntitlementFeatureId())->toStartWith('feat_')->toHaveLength(37)->toBeString();
 });
@@ -507,6 +539,14 @@ it('generates a financial connection transaction refresh id', function () {
 
 it('generates a tax calculation id', function () {
     expect($this->fake->stripeTaxCalculationId())->toStartWith('taxcalc_')->toHaveLength(32)->toBeString();
+});
+
+it('generates a tax location id', function () {
+    expect($this->fake->stripeTaxLocationId())->toStartWith('taxloc_')->toHaveLength(31)->toBeString();
+});
+
+it('generates a tax association id', function () {
+    expect($this->fake->stripeTaxAssociationId())->toStartWith('taxa_')->toHaveLength(29)->toBeString();
 });
 
 it('generates a tax registration id', function () {
@@ -563,6 +603,14 @@ it('generates a privacy redaction job validation error id', function () {
 
 it('generates an iam activity log id', function () {
     expect($this->fake->stripeIamActivityLogId())->toStartWith('accact_')->toHaveLength(31)->toBeString();
+});
+
+it('generates an apps app id', function () {
+    expect($this->fake->stripeAppsAppId())->toStartWith('app_')->toHaveLength(36)->toBeString();
+});
+
+it('generates an apps install id', function () {
+    expect($this->fake->stripeAppsInstallId())->toStartWith('appinst_')->toHaveLength(40)->toBeString();
 });
 
 it('generates a webhook endpoint id', function () {

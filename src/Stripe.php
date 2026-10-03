@@ -237,6 +237,11 @@ class Stripe extends Base
         return 'to_' . $this->generateRandomString();
     }
 
+    public function stripeProductCatalogImportId(): string
+    {
+        return 'pcimprt_' . $this->generateRandomString(length: 44);
+    }
+
     public function stripeCheckoutSessionId(): string
     {
         return 'cs_' . $this->generateRandomString(length: 58);
@@ -372,9 +377,29 @@ class Stripe extends Base
         return 'clock_' . $this->generateRandomString();
     }
 
+    public function stripeBillingFeedbackOptionId(): string
+    {
+        return 'fo_' . $this->generateRandomString();
+    }
+
     public function stripeFinancingOfferId(): string
     {
         return 'financingoffer_' . $this->generateRandomString();
+    }
+
+    public function stripeReservePlanId(): string
+    {
+        return 'resplan_' . $this->generateRandomString(length: 29);
+    }
+
+    public function stripeReserveHoldId(): string
+    {
+        return 'reshold_' . $this->generateRandomString(length: 29);
+    }
+
+    public function stripeReserveReleaseId(): string
+    {
+        return 'resrel_' . $this->generateRandomString(length: 29);
     }
 
     public function stripeConnectAccountId(): string
@@ -450,6 +475,11 @@ class Stripe extends Base
     public function stripeFraudValueListItemId(): string
     {
         return 'rsli_' . $this->generateRandomString();
+    }
+
+    public function stripeFraudPaymentEvaluationId(): string
+    {
+        return 'peval_' . $this->generateRandomString();
     }
 
     public function stripeIssuingAuthorizationId(): string
@@ -587,6 +617,16 @@ class Stripe extends Base
         return 'adj_' . $this->generateRandomString(length: 46);
     }
 
+    public function stripeMoneyManagementOutboundPaymentQuoteId(): string
+    {
+        return 'obpq_' . $this->generateRandomString(length: 46);
+    }
+
+    public function stripeMoneyManagementOutboundSetupIntentId(): string
+    {
+        return 'osi_' . $this->generateRandomString(length: 44);
+    }
+
     public function stripeEntitlementFeatureId(): string
     {
         return 'feat_' . $this->generateRandomString(length: 32);
@@ -645,6 +685,16 @@ class Stripe extends Base
     public function stripeTaxCalculationId(): string
     {
         return 'taxcalc_' . $this->generateRandomString();
+    }
+
+    public function stripeTaxLocationId(): string
+    {
+        return 'taxloc_' . $this->generateRandomString();
+    }
+
+    public function stripeTaxAssociationId(): string
+    {
+        return 'taxa_' . $this->generateRandomString();
     }
 
     public function stripeTaxRegistrationId(): string
@@ -715,6 +765,16 @@ class Stripe extends Base
     public function stripeIamActivityLogId(): string
     {
         return 'accact_' . $this->generateRandomString();
+    }
+
+    public function stripeAppsAppId(): string
+    {
+        return 'app_' . $this->generateRandomString(length: 32);
+    }
+
+    public function stripeAppsInstallId(): string
+    {
+        return 'appinst_' . $this->generateRandomString(length: 32);
     }
 
     public function stripeWebhookEndpointId(): string

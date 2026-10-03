@@ -1,4 +1,4 @@
-![FakerPHP Stripe ID Provider Banner](assets/banner.png)
+![FakerPHP Stripe ID Provider Banner](assets/banner-v2.png)
 
 # FakerPHP Stripe ID Provider
 

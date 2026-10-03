@@ -57,6 +57,14 @@ it('generates a payment intent client secret', function () {
     expect($this->fake->stripeCorePaymentIntentClientSecret())->toStartWith('pi_')->toContain('_secret_')->toHaveLength(60)->toBeString();
 });
 
+it('generates a payment intent line item id', function () {
+    expect($this->fake->stripeCorePaymentIntentLineItemId())->toStartWith('uli_')->toHaveLength(18)->toBeString();
+});
+
+it('generates an ephemeral key id', function () {
+    expect($this->fake->stripeCoreEphemeralKeyId())->toStartWith('ephkey_')->toHaveLength(31)->toBeString();
+});
+
 it('generates a core setup intent id', function () {
     expect($this->fake->stripeCoreSetupIntentId())->toStartWith('seti_')->toHaveLength(29)->toBeString();
 });
@@ -107,6 +115,14 @@ it('generates a core cvc token id', function () {
 
 it('generates a core person token id', function () {
     expect($this->fake->stripeCorePersonTokenId())->toStartWith('cpt_')->toHaveLength(28)->toBeString();
+});
+
+it('generates a v2 account token id', function () {
+    expect($this->fake->stripeV2AccountTokenId())->toStartWith('accttok_')->toHaveLength(52)->toBeString();
+});
+
+it('generates a v2 person token id', function () {
+    expect($this->fake->stripeV2PersonTokenId())->toStartWith('perstok_')->toHaveLength(52)->toBeString();
 });
 
 it('generates a core pii token id', function () {
@@ -189,6 +205,10 @@ it('generates a checkout session id', function () {
     expect($this->fake->stripeCheckoutSessionId())->toStartWith('cs_')->toHaveLength(61)->toBeString();
 });
 
+it('generates a checkout session line item id', function () {
+    expect($this->fake->stripeCheckoutSessionLineItemId())->toStartWith('li_')->toHaveLength(27)->toBeString();
+});
+
 it('generates a payment link id', function () {
     expect($this->fake->stripePaymentLinkId())->toStartWith('plink_')->toHaveLength(30)->toBeString();
 });
@@ -245,6 +265,10 @@ it('generates a billing alert id', function () {
     expect($this->fake->stripeBillingAlertId())->toStartWith('alrt_')->toHaveLength(10)->toBeString();
 });
 
+it('generates a billing alert notification id', function () {
+    expect($this->fake->stripeBillingAlertNotificationId())->toStartWith('threvt_')->toHaveLength(31)->toBeString();
+});
+
 it('generates a billing meter id', function () {
     expect($this->fake->stripeBillingMeterId())->toStartWith('mtr_')->toHaveLength(9)->toBeString();
 });
@@ -259,6 +283,10 @@ it('generates a billing meter event summary id', function () {
 
 it('generates a credit grant id', function () {
     expect($this->fake->stripeBillingCreditGrantId())->toStartWith('credgr_')->toHaveLength(31)->toBeString();
+});
+
+it('generates a credit grant crgr id', function () {
+    expect($this->fake->stripeBillingCreditGrantCrgrId())->toStartWith('crgr_')->toHaveLength(29)->toBeString();
 });
 
 it('generates a billing customer balance transaction id', function () {
@@ -315,6 +343,14 @@ it('generates a reserve release id', function () {
 
 it('generates a connect account id', function () {
     expect($this->fake->stripeConnectAccountId())->toStartWith('acct_')->toHaveLength(21)->toBeString();
+});
+
+it('generates a connect destination charge id', function () {
+    expect($this->fake->stripeConnectDestinationChargeId())->toStartWith('py_')->toHaveLength(27)->toBeString();
+});
+
+it('generates a connect destination charge refund id', function () {
+    expect($this->fake->stripeConnectDestinationChargeRefundId())->toStartWith('pyr_')->toHaveLength(28)->toBeString();
 });
 
 it('generates a connect application fee id', function () {
@@ -375,6 +411,14 @@ it('generates a fraud value list item id', function () {
 
 it('generates a fraud payment evaluation id', function () {
     expect($this->fake->stripeFraudPaymentEvaluationId())->toStartWith('peval_')->toHaveLength(30)->toBeString();
+});
+
+it('generates a fraud customer evaluation id', function () {
+    expect($this->fake->stripeFraudCustomerEvaluationId())->toStartWith('cuseval_')->toHaveLength(32)->toBeString();
+});
+
+it('generates a fraud radar session id', function () {
+    expect($this->fake->stripeFraudRadarSessionId())->toStartWith('rse_')->toHaveLength(28)->toBeString();
 });
 
 it('generates an issuing authorization id', function () {
@@ -493,6 +537,22 @@ it('generates a money management outbound setup intent id', function () {
     expect($this->fake->stripeMoneyManagementOutboundSetupIntentId())->toStartWith('osi_')->toHaveLength(48)->toBeString();
 });
 
+it('generates a money management inbound transfer history entry id', function () {
+    expect($this->fake->stripeMoneyManagementInboundTransferHistoryEntryId())->toStartWith('ibthe_')->toHaveLength(50)->toBeString();
+});
+
+it('generates a money management french bank account payout method id', function () {
+    expect($this->fake->stripeMoneyManagementFrenchBankAccountPayoutMethodId())->toStartWith('frba_')->toHaveLength(37)->toBeString();
+});
+
+it('generates a seller network business profile id', function () {
+    expect($this->fake->stripeSellerNetworkBusinessProfileId())->toStartWith('snbp_')->toHaveLength(29)->toBeString();
+});
+
+it('generates a stripe balance debit agreement id', function () {
+    expect($this->fake->stripeBalanceDebitAgreementId())->toStartWith('sbda_')->toHaveLength(29)->toBeString();
+});
+
 it('generates an entitlement feature id', function () {
     expect($this->fake->stripeEntitlementFeatureId())->toStartWith('feat_')->toHaveLength(37)->toBeString();
 });
@@ -523,6 +583,14 @@ it('generates a financial connection account id', function () {
 
 it('generates a financial connection account ownership id', function () {
     expect($this->fake->stripeFinancialConnectionAccountOwnershipId())->toStartWith('fcaowns_')->toHaveLength(32)->toBeString();
+});
+
+it('generates a financial connection account owner id', function () {
+    expect($this->fake->stripeFinancialConnectionAccountOwnerId())->toStartWith('fcaown_')->toHaveLength(31)->toBeString();
+});
+
+it('generates a financial connection authorization id', function () {
+    expect($this->fake->stripeFinancialConnectionAuthorizationId())->toStartWith('fcauth_')->toHaveLength(31)->toBeString();
 });
 
 it('generates a financial connection session id', function () {
@@ -577,6 +645,18 @@ it('generates a crypto onramp session client secret', function () {
     expect($this->fake->stripeCryptoOnrampSessionClientSecret())->toStartWith('cos_')->toContain('_secret_')->toHaveLength(71)->toBeString();
 });
 
+it('generates a crypto consumer wallet id', function () {
+    expect($this->fake->stripeCryptoConsumerWalletId())->toStartWith('ccw_')->toHaveLength(28)->toBeString();
+});
+
+it('generates a crypto customer id', function () {
+    expect($this->fake->stripeCryptoCustomerId())->toStartWith('crc_')->toHaveLength(28)->toBeString();
+});
+
+it('generates a crypto deposit address id', function () {
+    expect($this->fake->stripeCryptoDepositAddressId())->toStartWith('cda_')->toHaveLength(28)->toBeString();
+});
+
 it('generates a climate order id', function () {
     expect($this->fake->stripeClimateOrderId())->toStartWith('climorder_')->toHaveLength(34)->toBeString();
 });
@@ -623,4 +703,24 @@ it('generates a webhook application id', function () {
 
 it('generates a legacy source id', function () {
     expect($this->fake->stripeBillingSourceId())->toStartWith('src_')->toHaveLength(28)->toBeString();
+});
+
+it('generates a health alert id', function () {
+    expect($this->fake->stripeHealthAlertId())->toStartWith('healt_')->toHaveLength(30)->toBeString();
+});
+
+it('generates a cxt id', function () {
+    expect($this->fake->stripeCxtId())->toStartWith('cxt_')->toHaveLength(28)->toBeString();
+});
+
+it('generates an intd id', function () {
+    expect($this->fake->stripeIntdId())->toStartWith('intd_')->toHaveLength(29)->toBeString();
+});
+
+it('generates an api mk key id', function () {
+    expect($this->fake->stripeApiMkKeyId())->toStartWith('mk_')->toHaveLength(27)->toBeString();
+});
+
+it('generates a restricted live api key id', function () {
+    expect($this->fake->stripeRestrictedLiveApiKeyId())->toStartWith('rk_live_')->toHaveLength(32)->toBeString();
 });

@@ -1,5 +1,7 @@
 <?php
 
+declare(strict_types=1);
+
 namespace Faker\Provider;
 
 class Stripe extends Base

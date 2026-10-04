@@ -1,13 +1,15 @@
-![FakerPHP Stripe ID Provider Banner](assets/banner-v2.png)
+<p align="center">
+    <img src="assets/banner-v2.png" alt="FakerPHP Stripe ID Provider Banner">
+    <p align="center">
+        <a href="https://github.com/JonPurvis/faker-stripe/actions"><img alt="GitHub Workflow Status (main)" src="https://github.com/JonPurvis/faker-stripe/actions/workflows/tests.yml/badge.svg"></a>
+        <a href="https://packagist.org/packages/jonpurvis/faker-stripe"><img alt="Total Downloads" src="https://img.shields.io/packagist/dt/jonpurvis/faker-stripe"></a>
+        <a href="https://packagist.org/packages/jonpurvis/faker-stripe"><img alt="Latest Version" src="https://img.shields.io/packagist/v/jonpurvis/faker-stripe"></a>
+        <a href="https://packagist.org/packages/jonpurvis/faker-stripe"><img alt="License" src="https://img.shields.io/packagist/l/jonpurvis/faker-stripe"></a>
+    </p>
+</p>
 
+------
 # FakerPHP Stripe ID Provider
-
-![GitHub Workflow Status](https://img.shields.io/github/actions/workflow/status/jonpurvis/faker-stripe/ci.yml)
-![GitHub last commit](https://img.shields.io/github/last-commit/jonpurvis/faker-stripe)
-![Packagist PHP Version](https://img.shields.io/packagist/dependency-v/jonpurvis/faker-stripe/php)
-![GitHub issues](https://img.shields.io/github/issues/jonpurvis/faker-stripe)
-![GitHub](https://img.shields.io/github/license/jonpurvis/faker-stripe)
-![Packagist Downloads](https://img.shields.io/packagist/dt/jonpurvis/faker-stripe)
 
 ## 👋 Introduction
 This package allows FakerPHP to generate fake IDs which have the same structure you can expect to be returned from 

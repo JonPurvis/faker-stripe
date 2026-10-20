@@ -97,6 +97,10 @@ it('generates a confirmation token id', function (): void {
     expect($this->fake->stripeCoreConfirmationTokenId())->toStartWith('ctoken_')->toHaveLength(31)->toBeString();
 });
 
+it('generates a three d secure authentication id', function (): void {
+    expect($this->fake->stripeThreeDSecureAuthenticationId())->toStartWith('tdsa_')->toHaveLength(29)->toBeString();
+});
+
 it('generates a core account token id', function (): void {
     expect($this->fake->stripeCoreAccountTokenId())->toStartWith('ct_')->toHaveLength(27)->toBeString();
 });

@@ -6,3 +6,7 @@ The format is based on [Keep a Changelog](http://keepachangelog.com/)
 and this project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [Unreleased]
+
+### Added
+
+- `stripeThreeDSecureAuthenticationId()` for Standalone 3D Secure Authentication objects (`tdsa_`).

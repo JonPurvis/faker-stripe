@@ -134,6 +134,11 @@ class Stripe extends Base
         return 'ctoken_' . $this->generateRandomString();
     }
 
+    public function stripeThreeDSecureAuthenticationId(): string
+    {
+        return 'tdsa_' . $this->generateRandomString();
+    }
+
     public function stripeCoreAccountTokenId(): string
     {
         return 'ct_' . $this->generateRandomString();

@@ -12,14 +12,13 @@
 # FakerPHP Stripe ID Provider
 
 ## 👋 Introduction
-This package allows FakerPHP to generate fake IDs which have the same structure you can expect to be returned from 
-Stripe. The wonderful [Pest](https://pestphp.com/) is used to run tests contained within this package, which requires
-a minimum PHP Version of 8.3. 
+This package allows FakerPHP to generate fake IDs which have the same structure you can expect to be returned from
+Stripe.
 
 This package is listed on the [official FakerPHP website](https://fakerphp.org/third-party/) as a third party library.
 
 ## ✨Features
-This package can currently generate fake IDs for the following Stripe resources. To avoid any confusion,
+This package can currently generate fake IDs for **180** Stripe resources (see tables below). To avoid any confusion,
 the names of resources _should_ match what's in this package.
 
 ### Core Resources
